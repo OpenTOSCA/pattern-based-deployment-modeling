@@ -7,5 +7,14 @@
     "patternCollection" : true,
     "secureCollection" : false,
     "generatedNamespace" : false
+  },
+  "http://opentosca.org/policytemplates/patterns" : {
+    "namespace" : "http://opentosca.org/policytemplates/patterns",
+    "prefix" : "otpteIpatterns",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : true,
+    "secureCollection" : false,
+    "generatedNamespace" : false
   }
 }
