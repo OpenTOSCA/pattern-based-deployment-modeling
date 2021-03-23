@@ -1,0 +1,11 @@
+{
+  "http://opentosca.org/nodetypes/patterns" : {
+    "namespace" : "http://opentosca.org/nodetypes/patterns",
+    "prefix" : "otntyIpatterns",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : true,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  }
+}
