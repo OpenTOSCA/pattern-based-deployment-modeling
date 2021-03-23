@@ -17,6 +17,15 @@
     "secureCollection" : false,
     "generatedNamespace" : false
   },
+  "http://opentosca.org/servicetemplates" : {
+    "namespace" : "http://opentosca.org/servicetemplates",
+    "prefix" : "otsteIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  },
   "http://opentosca.org/nodetypes/abstract" : {
     "namespace" : "http://opentosca.org/nodetypes/abstract",
     "prefix" : "otntyIabstract",
