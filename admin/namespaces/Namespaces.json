@@ -17,9 +17,27 @@
     "secureCollection" : false,
     "generatedNamespace" : false
   },
+  "http://opentosca.org/nodetypes/abstract" : {
+    "namespace" : "http://opentosca.org/nodetypes/abstract",
+    "prefix" : "otntyIabstract",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  },
   "http://opentosca.org/relationshiptypes" : {
     "namespace" : "http://opentosca.org/relationshiptypes",
     "prefix" : "otntyIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  },
+  "http://opentosca.org/nodetypes" : {
+    "namespace" : "http://opentosca.org/nodetypes",
+    "prefix" : "otntyIgeneral1",
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : false,
