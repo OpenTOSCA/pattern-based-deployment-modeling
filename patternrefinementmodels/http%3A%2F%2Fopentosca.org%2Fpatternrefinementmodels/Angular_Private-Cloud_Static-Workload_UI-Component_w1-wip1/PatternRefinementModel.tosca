@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Angular_Private-Cloud_Static-Workload_UI-Component_w1-wip1">
+    <PatternRefinementModel name="Angular_Private-Cloud_Static-Workload_UI-Component_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Angular-Web-App_w1-wip2" minInstances="1" maxInstances="1" type="otntyIgeneral1:Angular-Web-App_w1-wip2" id="d_Angular-Web-App_w1-wip2_0" ns0:x="812" ns0:y="198">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <context/>
+                        <port/>
+                    </properties>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="staticWorkload" policyType="otpteIpatterns:Static-Workload_w1-wip1"/>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="userInterfaceComponent" policyType="otpteIpatterns:User-Interface-Component_w1-wip1"/>
+                </Policies>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Execution-Environment_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Execution-Environment_w1-wip1" id="d_Execution-Environment_w1-wip1_0" ns0:x="885" ns0:y="397">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Private-Cloud_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Private-Cloud_w1-wip1" id="d_Private-Cloud_w1-wip1_0" ns0:x="897" ns0:y="626">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_0">
+                <SourceElement ref="d_Angular-Web-App_w1-wip2_0"/>
+                <TargetElement ref="d_Execution-Environment_w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_1">
+                <SourceElement ref="d_Execution-Environment_w1-wip1_0"/>
+                <TargetElement ref="d_Private-Cloud_w1-wip1_0"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings>
+            <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:connectsTo_w1-wip1" direction="outgoing" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Angular-Web-App_w1-wip2_0" id="relMap0"/>
+        </RelationMappings>
+        <PermutationMappings/>
+        <RefinementStructure>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Angular-Web-App_w1-wip2" minInstances="1" maxInstances="1" type="otntyIgeneral1:Angular-Web-App_w1-wip2" id="rs_Angular-Web-App_w1-wip2_0" ns0:x="682" ns0:y="183">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <context/>
+                        <port/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Tomcat" minInstances="1" maxInstances="1" type="otntyIgeneral1:Tomcat_10-w1-wip1" id="rs_Tomcat_10-w1-wip1_0" ns0:x="681" ns0:y="376">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <jmxPort/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="otntyIgeneral1:Ubuntu_20.04-w1-wip1" id="rs_Ubuntu_20.04-w1-wip1_0" ns0:x="702" ns0:y="510">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <ram>32GB</ram>
+                        <storage>500GB</storage>
+                        <user/>
+                        <publicIp/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="otntyIgeneral1:OpenStack_Victoria-w1-wip1" id="rs_OpenStack_Victoria-w1-wip1_0" ns0:x="675" ns0:y="853">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <location/>
+                        <api/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="rs_con_hostedOn_w1-wip1_0">
+                <SourceElement ref="rs_Angular-Web-App_w1-wip2_0"/>
+                <TargetElement ref="rs_Tomcat_10-w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="rs_con_hostedOn_w1-wip1_1">
+                <SourceElement ref="rs_Tomcat_10-w1-wip1_0"/>
+                <TargetElement ref="rs_Ubuntu_20.04-w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="rs_con_hostedOn_w1-wip1_2">
+                <SourceElement ref="rs_Ubuntu_20.04-w1-wip1_0"/>
+                <TargetElement ref="rs_OpenStack_Victoria-w1-wip1_0"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <AttributeMappings/>
+        <StayMappings>
+            <StayMapping detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Angular-Web-App_w1-wip2_0" id="stayMap0"/>
+        </StayMappings>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings>
+            <BehaviorPatternMapping behaviorPattern="staticWorkload" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Ubuntu_20.04-w1-wip1_0" id="behaviorPatternMap0">
+                <Property key="ram" value="32GB"/>
+            </BehaviorPatternMapping>
+            <BehaviorPatternMapping behaviorPattern="staticWorkload" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Ubuntu_20.04-w1-wip1_0" id="behaviorPatternMap1">
+                <Property key="storage" value="500GB"/>
+            </BehaviorPatternMapping>
+        </BehaviorPatternMappings>
+    </PatternRefinementModel>
+</Definitions>
