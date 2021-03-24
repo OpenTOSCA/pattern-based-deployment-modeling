@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Java_Execution-Env_Static-Workload_Processing-Component_w1-wip1">
+    <PatternRefinementModel name="Java_Execution-Env_Static-Workload_Processing-Component_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Java-App" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1-wip1" id="d_Java-App_11-w1-wip1_0" ns0:x="831" ns0:y="201">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <maxHeap/>
+                        <port/>
+                    </properties>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="staticWorkload" policyType="otpteIpatterns:Static-Workload_w1-wip1"/>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="processingComponent" policyType="otpteIpatterns:Processing-Component_w1-wip1"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Execution-Environment_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Execution-Environment_w1-wip1" id="d_Execution-Environment_w1-wip1_0" ns0:x="907" ns0:y="347">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="otntyIgeneral1:Ubuntu_20.04-w1-wip1" id="d_Ubuntu_20.04-w1-wip1_0" ns0:x="829" ns0:y="549">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <ram/>
+                        <storage/>
+                        <user/>
+                        <publicIp/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="otntyIgeneral1:OpenStack_Victoria-w1-wip1" id="d_OpenStack_Victoria-w1-wip1_0" ns0:x="845" ns0:y="743">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <location/>
+                        <api/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_0">
+                <SourceElement ref="d_Java-App_11-w1-wip1_0"/>
+                <TargetElement ref="d_Execution-Environment_w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_1">
+                <SourceElement ref="d_Ubuntu_20.04-w1-wip1_0"/>
+                <TargetElement ref="d_OpenStack_Victoria-w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_2">
+                <SourceElement ref="d_Execution-Environment_w1-wip1_0"/>
+                <TargetElement ref="d_Ubuntu_20.04-w1-wip1_0"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings>
+            <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:connectsTo_w1-wip1" direction="outgoing" detectorNode="d_Java-App_11-w1-wip1_0" refinementNode="rs_Java-App_11-w1-wip1_0" id="relMap0"/>
+            <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:hostedOn_w1-wip1" direction="ingoing" detectorNode="d_Ubuntu_20.04-w1-wip1_0" refinementNode="rs_Ubuntu_20.04-w1-wip1_0" id="relMap1"/>
+        </RelationMappings>
+        <PermutationMappings/>
+        <RefinementStructure>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Java-App" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1-wip1" id="rs_Java-App_11-w1-wip1_0" ns0:x="852" ns0:y="189">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <maxHeap/>
+                        <port>8081</port>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Tomcat" minInstances="1" maxInstances="1" type="otntyIgeneral1:Tomcat_10-w1-wip1" id="rs_Tomcat_10-w1-wip1_0" ns0:x="873" ns0:y="449">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <jmxPort/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="otntyIgeneral1:Ubuntu_20.04-w1-wip1" id="rs_Ubuntu_20.04-w1-wip1_0" ns0:x="881" ns0:y="631">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <ram>128GB</ram>
+                        <storage>10TB</storage>
+                        <user/>
+                        <publicIp/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="otntyIgeneral1:OpenStack_Victoria-w1-wip1" id="rs_OpenStack_Victoria-w1-wip1_0" ns0:x="878" ns0:y="846">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <location/>
+                        <api/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="rs_con_hostedOn_w1-wip1_0">
+                <SourceElement ref="rs_Java-App_11-w1-wip1_0"/>
+                <TargetElement ref="rs_Tomcat_10-w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="rs_con_hostedOn_w1-wip1_1">
+                <SourceElement ref="rs_Tomcat_10-w1-wip1_0"/>
+                <TargetElement ref="rs_Ubuntu_20.04-w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="rs_con_hostedOn_w1-wip1_2">
+                <SourceElement ref="rs_Ubuntu_20.04-w1-wip1_0"/>
+                <TargetElement ref="rs_OpenStack_Victoria-w1-wip1_0"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <AttributeMappings>
+            <AttributeMapping type="selective" detectorProperty="port" refinementProperty="port" detectorNode="d_Java-App_11-w1-wip1_0" refinementNode="rs_Java-App_11-w1-wip1_0" id="propMap0"/>
+        </AttributeMappings>
+        <StayMappings>
+            <StayMapping detectorNode="d_Java-App_11-w1-wip1_0" refinementNode="rs_Java-App_11-w1-wip1_0" id="stayMap0"/>
+            <StayMapping detectorNode="d_Ubuntu_20.04-w1-wip1_0" refinementNode="rs_Ubuntu_20.04-w1-wip1_0" id="stayMap1"/>
+            <StayMapping detectorNode="d_OpenStack_Victoria-w1-wip1_0" refinementNode="rs_OpenStack_Victoria-w1-wip1_0" id="stayMap2"/>
+        </StayMappings>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings>
+            <BehaviorPatternMapping behaviorPattern="staticWorkload" detectorNode="d_Java-App_11-w1-wip1_0" refinementNode="rs_Ubuntu_20.04-w1-wip1_0" id="behaviorPatternMap0">
+                <Property key="ram" value="128GB"/>
+            </BehaviorPatternMapping>
+            <BehaviorPatternMapping behaviorPattern="staticWorkload" detectorNode="d_Java-App_11-w1-wip1_0" refinementNode="rs_Ubuntu_20.04-w1-wip1_0" id="behaviorPatternMap1">
+                <Property key="storage" value="10TB"/>
+            </BehaviorPatternMapping>
+        </BehaviorPatternMappings>
+    </PatternRefinementModel>
+</Definitions>

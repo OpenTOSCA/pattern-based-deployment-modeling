@@ -109,5 +109,8 @@
                 <Property key="storage" value="500GB"/>
             </BehaviorPatternMapping>
         </BehaviorPatternMappings>
+        <PermutationMappings>
+            <PermutationMapping detectorNode="d_Private-Cloud_w1-wip1_0" refinementNode="rs_OpenStack_Victoria-w1-wip1_0" id="permutationMap0"/>
+        </PermutationMappings>
     </PatternRefinementModel>
 </Definitions>
