@@ -37,7 +37,9 @@
             <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:hostedOn_w1-wip1" direction="ingoing" detectorNode="d_Public-Cloud_w1-wip2_0" refinementNode="rs_AWS_w1-wip1_0" id="relMap1"/>
             <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:connectsTo_w1-wip1" direction="ingoing" detectorNode="d_Relational-Database_w1-wip1_0" refinementNode="rs_MySQL-Database_8-w1-wip1_0" id="relMap2"/>
         </RelationMappings>
-        <PermutationMappings/>
+        <PermutationMappings>
+            <PermutationMapping detectorNode="d_Public-Cloud_w1-wip2_0" refinementNode="rs_AWS_w1-wip1_0" id="permutationMap0"/>
+        </PermutationMappings>
         <RefinementStructure>
             <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MySQL-DBMS" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-DBMS_8-w1-wip1" id="rs_MySQL-DBMS_8-w1-wip1_0" ns0:x="815" ns0:y="465">
                 <Properties>

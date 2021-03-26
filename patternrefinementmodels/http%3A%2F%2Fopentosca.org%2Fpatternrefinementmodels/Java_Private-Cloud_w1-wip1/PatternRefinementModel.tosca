@@ -32,7 +32,9 @@
         <RelationMappings>
             <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:SQL-Connection_w1-wip1" direction="outgoing" detectorNode="d_Java-App_11-w1-wip1_0" refinementNode="rs_Java-App_11-w1-wip1_0" id="relMap0"/>
         </RelationMappings>
-        <PermutationMappings/>
+        <PermutationMappings>
+            <PermutationMapping detectorNode="d_Private-Cloud_w1-wip1_0" refinementNode="rs_OpenStack_Victoria-w1-wip1_0" id="permutationMap0"/>
+        </PermutationMappings>
         <RefinementStructure>
             <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Java-App" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1-wip1" id="rs_Java-App_11-w1-wip1_0" ns0:x="850" ns0:y="196">
                 <Properties>

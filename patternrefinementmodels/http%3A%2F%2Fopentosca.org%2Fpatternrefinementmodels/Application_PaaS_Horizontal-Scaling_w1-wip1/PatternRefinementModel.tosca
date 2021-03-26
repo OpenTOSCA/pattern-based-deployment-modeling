@@ -36,7 +36,9 @@
             <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:hostedOn_w1-wip1" direction="ingoing" detectorNode="d_Public-Cloud_w1-wip2_0" refinementNode="rs_AWS_w1-wip1_0" id="relMap0"/>
             <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:connectsTo_w1-wip1" direction="outgoing" detectorNode="d_Application_w1-wip1_0" refinementNode="rs_Application_w1-wip1_0" id="relMap1"/>
         </RelationMappings>
-        <PermutationMappings/>
+        <PermutationMappings>
+            <PermutationMapping detectorNode="d_Public-Cloud_w1-wip2_0" refinementNode="rs_AWS_w1-wip1_0" id="permutationMap0"/>
+        </PermutationMappings>
         <RefinementStructure>
             <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Application_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Application_w1-wip1" id="rs_Application_w1-wip1_0" ns0:x="782" ns0:y="168">
                 <Properties>
