@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Secure-Channel-SQL_w1-wip2">
+    <PatternRefinementModel name="Secure-Channel-SQL_w1-wip2" targetNamespace="http://opentosca.org/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Application_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Application_w1-wip1" id="d_Application_w1-wip1_0" ns0:x="594" ns0:y="283">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="statelessComponent" policyType="otpteIpatterns:Stateless-Component_w1-wip1"/>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="horizontalScaling" policyType="otpteIpatterns:Horizontal-Scaling_w1-wip1"/>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="eventDrivenConsumer" policyType="otpteIpatterns:Event-Driven-Consumer_w1-wip1"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Database_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Database_w1-wip1" id="d_Database_w1-wip1_0" ns0:x="1176" ns0:y="287">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="SQL-Connection_w1-wip1" type="otntyIgeneral:SQL-Connection_w1-wip1" id="d_con_SQL-Connection_w1-wip1_0">
+                <SourceElement ref="d_Application_w1-wip1_0"/>
+                <TargetElement ref="d_Database_w1-wip1_0"/>
+                <Policies>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="secureChannel" policyType="otpteIpatterns:Secure-Channel_w1-wip1"/>
+                </Policies>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings/>
+        <PermutationMappings/>
+        <RefinementStructure>
+            <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Application_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Application_w1-wip1" id="rs_Application_w1-wip1_0" ns0:x="558" ns0:y="199">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="statelessComponent" policyType="otpteIpatterns:Stateless-Component_w1-wip1"/>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="horizontalScaling" policyType="otpteIpatterns:Horizontal-Scaling_w1-wip1"/>
+                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="eventDrivenConsumer" policyType="otpteIpatterns:Event-Driven-Consumer_w1-wip1"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Database_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Database_w1-wip1" id="rs_Database_w1-wip1_0" ns0:x="1093" ns0:y="200">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-SQL-Connection_w1-wip1" type="otntyIgeneral:Secure-SQL-Connection_w1-wip1" id="rs_con_Secure-SQL-Connection_w1-wip1_0">
+                <SourceElement ref="rs_Application_w1-wip1_0"/>
+                <TargetElement ref="rs_Database_w1-wip1_0"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <AttributeMappings/>
+        <StayMappings>
+            <StayMapping detectorNode="d_Application_w1-wip1_0" refinementNode="rs_Application_w1-wip1_0" id="StayMapping_0"/>
+            <StayMapping detectorNode="d_Database_w1-wip1_0" refinementNode="rs_Database_w1-wip1_0" id="StayMapping_1"/>
+        </StayMappings>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings/>
+    </PatternRefinementModel>
+</Definitions>
