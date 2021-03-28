@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Angular_Private-Cloud_Static-Workload_UI-Component_w1-wip1">
-    <PatternRefinementModel name="Angular_Private-Cloud_Static-Workload_UI-Component_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
+    <PatternRefinementModel isPdrm="yes" name="Angular_Private-Cloud_Static-Workload_UI-Component_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
         <Detector>
             <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Angular-Web-App_w1-wip2" minInstances="1" maxInstances="1" type="otntyIgeneral1:Angular-Web-App_w1-wip2" id="d_Angular-Web-App_w1-wip2_0" ns0:x="812" ns0:y="198">
                 <Properties>

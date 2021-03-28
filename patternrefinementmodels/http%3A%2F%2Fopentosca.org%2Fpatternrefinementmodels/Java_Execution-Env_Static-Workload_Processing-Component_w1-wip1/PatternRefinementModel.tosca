@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Java_Execution-Env_Static-Workload_Processing-Component_w1-wip1">
-    <PatternRefinementModel name="Java_Execution-Env_Static-Workload_Processing-Component_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
+    <PatternRefinementModel isPdrm="yes" name="Java_Execution-Env_Static-Workload_Processing-Component_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
         <Detector>
             <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Java-App" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1-wip1" id="d_Java-App_11-w1-wip1_0" ns0:x="831" ns0:y="201">
                 <Properties>
