@@ -148,83 +148,83 @@
                     </Properties>
                 </Properties>
             </NodeTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_0">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
                 <SourceElement ref="Java-App_11-w1-wip1_1"/>
                 <TargetElement ref="Tomcat_10-w1-wip1_1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_1">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
                 <SourceElement ref="Tomcat_10-w1-wip1_1"/>
                 <TargetElement ref="Ubuntu_20.04-w1-wip1_1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_2">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
                 <SourceElement ref="Ubuntu_20.04-w1-wip1_1"/>
                 <TargetElement ref="OpenStack_Victoria-w1-wip1_1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_3">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
                 <SourceElement ref="MySQL-DBMS_8-w1-wip1_0"/>
                 <TargetElement ref="Ubuntu_20.04-w1-wip1_1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_4">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_4">
                 <SourceElement ref="MySQL-Database_8-w1-wip1_0"/>
                 <TargetElement ref="MySQL-DBMS_8-w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-SQL-Connection_w1-wip1" type="otntyIgeneral:Secure-SQL-Connection_w1-wip1" id="con_Secure-SQL-Connection_w1-wip1_0">
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-SQL-Connection_w1-wip1" type="otrtyIgeneral:Secure-SQL-Connection_w1-wip1" id="con_Secure-SQL-Connection_w1-wip1_0">
                 <SourceElement ref="Java-App_11-w1-wip1_1"/>
                 <TargetElement ref="MySQL-Database_8-w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otntyIgeneral:Secure-Queue-Connection_w1-wip1" id="con_Secure-Queue-Connection_w1-wip1_0">
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otrtyIgeneral:Secure-Queue-Connection_w1-wip1" id="con_Secure-Queue-Connection_w1-wip1_0">
                 <SourceElement ref="Java-App_11-w1-wip1_1"/>
                 <TargetElement ref="SQS-Queue_w1-wip1_1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otntyIgeneral:Secure-Queue-Connection_w1-wip1" id="con_Secure-Queue-Connection_w1-wip1_1">
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otrtyIgeneral:Secure-Queue-Connection_w1-wip1" id="con_Secure-Queue-Connection_w1-wip1_1">
                 <SourceElement ref="Java-App_11-w1-wip1_0"/>
                 <TargetElement ref="SQS-Queue_w1-wip1_1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otntyIgeneral:Secure-Queue-Connection_w1-wip1" id="con_Secure-Queue-Connection_w1-wip1_2">
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otrtyIgeneral:Secure-Queue-Connection_w1-wip1" id="con_Secure-Queue-Connection_w1-wip1_2">
                 <SourceElement ref="Java-App_11-w1-wip1_0"/>
                 <TargetElement ref="SQS-Queue_w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otntyIgeneral:Secure-Queue-Connection_w1-wip1" id="con_Secure-Queue-Connection_w1-wip1_3">
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otrtyIgeneral:Secure-Queue-Connection_w1-wip1" id="con_Secure-Queue-Connection_w1-wip1_3">
                 <SourceElement ref="Angular-Web-App_w1-wip2_0"/>
                 <TargetElement ref="SQS-Queue_w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_5">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_5">
                 <SourceElement ref="SQS-Queue_w1-wip1_1"/>
                 <TargetElement ref="AWS-Simple-Queue-Service_w1-wip1_1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_7">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_7">
                 <SourceElement ref="Java-App_11-w1-wip1_0"/>
                 <TargetElement ref="Elastic-Beanstalk-Worker-Environment_w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_8">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_8">
                 <SourceElement ref="Elastic-Beanstalk-Worker-Environment_w1-wip1_0"/>
                 <TargetElement ref="AWS-Elastic-Beanstalk_w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_10">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_10">
                 <SourceElement ref="SQS-Queue_w1-wip1_0"/>
                 <TargetElement ref="AWS-Simple-Queue-Service_w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_12">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_12">
                 <SourceElement ref="Angular-Web-App_w1-wip2_0"/>
                 <TargetElement ref="Tomcat_10-w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_13">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_13">
                 <SourceElement ref="Tomcat_10-w1-wip1_0"/>
                 <TargetElement ref="Ubuntu_20.04-w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_14">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_14">
                 <SourceElement ref="Ubuntu_20.04-w1-wip1_0"/>
                 <TargetElement ref="OpenStack_Victoria-w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_6">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_6">
                 <SourceElement ref="AWS-Simple-Queue-Service_w1-wip1_1"/>
                 <TargetElement ref="AWS_w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_9">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_9">
                 <SourceElement ref="AWS-Elastic-Beanstalk_w1-wip1_0"/>
                 <TargetElement ref="AWS_w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="con_hostedOn_w1-wip1_11">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_11">
                 <SourceElement ref="AWS-Simple-Queue-Service_w1-wip1_0"/>
                 <TargetElement ref="AWS_w1-wip1_0"/>
             </RelationshipTemplate>

@@ -35,17 +35,17 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_0">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0">
                 <SourceElement ref="d_Angular-Web-App_w1-wip2_0"/>
                 <TargetElement ref="d_Execution-Environment_w1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_1">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_1">
                 <SourceElement ref="d_Execution-Environment_w1_0"/>
                 <TargetElement ref="d_Private-Cloud_w1_0"/>
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
-            <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:connectsTo_w1-wip1" direction="outgoing" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Angular-Web-App_w1-wip2_0" id="relMap0"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" typeRef="ToscaBaseTypes:ConnectsTo" direction="outgoing" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Angular-Web-App_w1-wip2_0" id="relMap0"/>
         </RelationMappings>
         <PermutationMappings/>
         <RefinementStructure>
@@ -82,15 +82,15 @@
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="rs_con_hostedOn_w1-wip1_0">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
                 <SourceElement ref="rs_Angular-Web-App_w1-wip2_0"/>
                 <TargetElement ref="rs_Tomcat_10-w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="rs_con_hostedOn_w1-wip1_1">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
                 <SourceElement ref="rs_Tomcat_10-w1-wip1_0"/>
                 <TargetElement ref="rs_Ubuntu_20.04-w1-wip1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="rs_con_hostedOn_w1-wip1_2">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_2">
                 <SourceElement ref="rs_Ubuntu_20.04-w1-wip1_0"/>
                 <TargetElement ref="rs_OpenStack_Victoria-w1-wip1_0"/>
             </RelationshipTemplate>

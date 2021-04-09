@@ -15,7 +15,7 @@
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
             </NodeTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Queue-Connection_w1-wip1" type="otntyIgeneral:Queue-Connection_w1-wip1" id="d_con_Queue-Connection_w1-wip1_0">
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Queue-Connection_w1-wip1" type="otrtyIgeneral:Queue-Connection_w1-wip1" id="d_con_Queue-Connection_w1-wip1_0">
                 <SourceElement ref="d_Application_w1-wip1_0"/>
                 <TargetElement ref="d_Queue_w1-wip1_0"/>
                 <Policies>
@@ -46,7 +46,7 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otntyIgeneral:Secure-Queue-Connection_w1-wip1" id="rs_con_Secure-Queue-Connection_w1-wip1_0">
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otrtyIgeneral:Secure-Queue-Connection_w1-wip1" id="rs_con_Secure-Queue-Connection_w1-wip1_0">
                 <SourceElement ref="rs_Application_w1-wip1_0"/>
                 <TargetElement ref="rs_Queue_w1-wip1_0"/>
             </RelationshipTemplate>

@@ -46,7 +46,7 @@
   },
   "http://opentosca.org/relationshiptypes" : {
     "namespace" : "http://opentosca.org/relationshiptypes",
-    "prefix" : "otntyIgeneral",
+    "prefix" : "otrtyIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : false,
