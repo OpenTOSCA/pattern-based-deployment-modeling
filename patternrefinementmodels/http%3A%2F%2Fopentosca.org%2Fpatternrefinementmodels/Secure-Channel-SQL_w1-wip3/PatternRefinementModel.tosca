@@ -9,9 +9,9 @@
                 <Requirements/>
                 <Capabilities/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="statelessComponent" policyType="otpteIpatterns:Stateless-Component_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="horizontalScaling" policyType="otpteIpatterns:Horizontal-Scaling_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="eventDrivenConsumer" policyType="otpteIpatterns:Event-Driven-Consumer_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="horizontalScaling" policyType="otptyIpatterns:Horizontal-Scaling_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="eventDrivenConsumer" policyType="otptyIpatterns:Event-Driven-Consumer_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
@@ -22,8 +22,8 @@
                 <Requirements/>
                 <Capabilities/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="strictConsistency" policyType="otpteIpatterns:Strict-Consistency_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="informationObscurity" policyType="otpteIpatterns:Information-Obscurity_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="strictConsistency" policyType="otptyIpatterns:Strict-Consistency_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Idempotent-Processor_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
@@ -31,7 +31,7 @@
                 <SourceElement ref="d_Application_w1-wip1_0"/>
                 <TargetElement ref="d_Relational-Database_w1-wip1_0"/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="secureChannel" policyType="otpteIpatterns:Secure-Channel_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
                 </Policies>
             </RelationshipTemplate>
         </Detector>
@@ -45,9 +45,9 @@
                 <Requirements/>
                 <Capabilities/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="statelessComponent" policyType="otpteIpatterns:Stateless-Component_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="horizontalScaling" policyType="otpteIpatterns:Horizontal-Scaling_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="eventDrivenConsumer" policyType="otpteIpatterns:Event-Driven-Consumer_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="horizontalScaling" policyType="otptyIpatterns:Horizontal-Scaling_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="eventDrivenConsumer" policyType="otptyIpatterns:Event-Driven-Consumer_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
@@ -56,8 +56,8 @@
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="strictConsistency" policyType="otpteIpatterns:Strict-Consistency_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="informationObscurity" policyType="otpteIpatterns:Information-Obscurity_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="strictConsistency" policyType="otptyIpatterns:Strict-Consistency_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Idempotent-Processor_w1"/>
                 </Policies>
             </NodeTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-SQL-Connection_w1-wip1" type="otntyIgeneral:Secure-SQL-Connection_w1-wip1" id="rs_con_Secure-SQL-Connection_w1-wip1_1">

@@ -18,8 +18,8 @@
                 <Requirements/>
                 <Capabilities/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="strictConsistency" policyType="otpteIpatterns:Strict-Consistency_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="informationObscurity" policyType="otpteIpatterns:Information-Obscurity_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="strictConsistency" policyType="otptyIpatterns:Strict-Consistency_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Idempotent-Processor_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
@@ -27,7 +27,7 @@
                 <SourceElement ref="d_Application_w1-wip1_0"/>
                 <TargetElement ref="d_Relational-Database_w1-wip1_0"/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="secureChannel" policyType="otpteIpatterns:Secure-Channel_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
                 </Policies>
             </RelationshipTemplate>
         </Detector>
@@ -50,8 +50,8 @@
                 <Requirements/>
                 <Capabilities/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="strictConsistency" policyType="otpteIpatterns:Strict-Consistency_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="informationObscurity" policyType="otpteIpatterns:Information-Obscurity_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="strictConsistency" policyType="otptyIpatterns:Strict-Consistency_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Idempotent-Processor_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>

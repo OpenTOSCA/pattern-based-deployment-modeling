@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-P2P-Channel_Exactly-Once-Delivery_Information-Obscurity_w1-wip1">
-    <PatternRefinementModel isPdrm="yes" name="P2P-Channel_Exactly-Once-Delivery_Information-Obscurity_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-P2P-Channel_Exactly-Once-Delivery_Idempotent-Processor_w1">
+    <PatternRefinementModel isPdrm="yes" name="P2P-Channel_Exactly-Once-Delivery_Idempotent-Processor_w1" targetNamespace="http://opentosca.org/patternrefinementmodels">
         <Detector>
             <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Point-to-Point-Channel_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Point-to-Point-Channel_w1-wip1" id="d_Point-to-Point-Channel_w1-wip1_0" ns0:x="887" ns0:y="158">
                 <Properties>
@@ -9,8 +9,8 @@
                 <Requirements/>
                 <Capabilities/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="exactlyOnceDelivery" policyType="otpteIpatterns:Exactly-once-Delivery_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="informationObscurity" policyType="otpteIpatterns:Information-Obscurity_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="exactlyOnceDelivery" policyType="otptyIpatterns:Exactly-once-Delivery_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Idempotent-Processor_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>

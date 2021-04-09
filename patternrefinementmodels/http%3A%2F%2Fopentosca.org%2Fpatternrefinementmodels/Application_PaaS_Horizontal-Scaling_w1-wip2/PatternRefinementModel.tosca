@@ -7,7 +7,7 @@
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="horizontalScaling" policyType="otpteIpatterns:Horizontal-Scaling_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="horizontalScaling" policyType="otptyIpatterns:Horizontal-Scaling_w1"/>
                 </Policies>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Platform-as-a-Service_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Platform-as-a-Service_w1-wip1" id="d_Platform-as-a-Service_w1-wip1_0" ns0:x="967" ns0:y="425">

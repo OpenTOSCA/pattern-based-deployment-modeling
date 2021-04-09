@@ -7,8 +7,8 @@
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="strictConsistency" policyType="otpteIpatterns:Strict-Consistency_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="informationObscurity" policyType="otpteIpatterns:Information-Obscurity_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="strictConsistency" policyType="otptyIpatterns:Strict-Consistency_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Idempotent-Processor_w1"/>
                 </Policies>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Public-Cloud_w1-wip2" minInstances="1" maxInstances="1" type="otntyIpatterns:Public-Cloud_w1-wip2" id="d_Public-Cloud_w1-wip2_0" ns0:x="818" ns0:y="555">

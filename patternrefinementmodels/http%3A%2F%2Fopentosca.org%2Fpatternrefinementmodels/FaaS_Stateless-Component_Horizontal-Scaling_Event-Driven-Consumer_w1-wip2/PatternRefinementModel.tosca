@@ -9,9 +9,9 @@
                 <Requirements/>
                 <Capabilities/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="statelessComponent" policyType="otpteIpatterns:Stateless-Component_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="horizontalScaling" policyType="otpteIpatterns:Horizontal-Scaling_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="eventDrivenConsumer" policyType="otpteIpatterns:Event-Driven-Consumer_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="horizontalScaling" policyType="otptyIpatterns:Horizontal-Scaling_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="eventDrivenConsumer" policyType="otptyIpatterns:Event-Driven-Consumer_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>

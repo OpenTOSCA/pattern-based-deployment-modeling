@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Application_PaaS_Unpredictable-Workload_Stateless_Processing-Component_w1-wip1">
-    <PatternRefinementModel isPdrm="yes" name="Application_PaaS_Unpredictable-Workload_Stateless_Processing-Component_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Application_PaaS_Unpredictable-Workload_Stateless_Processing-Component_w1">
+    <PatternRefinementModel isPdrm="yes" name="Application_PaaS_Unpredictable-Workload_Stateless_Processing-Component_w1" targetNamespace="http://opentosca.org/patternrefinementmodels">
         <Detector>
             <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Application_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Application_w1-wip1" id="d_Application_w1-wip1_0" ns0:x="839" ns0:y="161">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="unpredictableWorkload" policyType="otpteIpatterns:Unpredictable-Workload_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="statelessComponent" policyType="otpteIpatterns:Stateless-Component_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="processingComponent" policyType="otpteIpatterns:Processing-Component_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="unpredictableWorkload" policyType="otptyIpatterns:Unpredictable-Workload_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="processingComponent" policyType="otptyIpatterns:Processing-Component_w1"/>
                 </Policies>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Platform-as-a-Service_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Platform-as-a-Service_w1-wip1" id="d_Platform-as-a-Service_w1-wip1_0" ns0:x="891" ns0:y="395">

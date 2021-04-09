@@ -9,8 +9,8 @@
                 <Requirements/>
                 <Capabilities/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="exactlyOnceDelivery" policyType="otpteIpatterns:Exactly-once-Delivery_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="informationObscurity" policyType="otpteIpatterns:Information-Obscurity_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="exactlyOnceDelivery" policyType="otptyIpatterns:Exactly-once-Delivery_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Idempotent-Processor_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>

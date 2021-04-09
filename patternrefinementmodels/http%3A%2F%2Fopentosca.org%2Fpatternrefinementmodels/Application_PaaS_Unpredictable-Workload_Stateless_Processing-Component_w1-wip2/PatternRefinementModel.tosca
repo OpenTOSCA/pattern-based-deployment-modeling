@@ -7,9 +7,9 @@
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="unpredictableWorkload" policyType="otpteIpatterns:Unpredictable-Workload_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="statelessComponent" policyType="otpteIpatterns:Stateless-Component_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="processingComponent" policyType="otpteIpatterns:Processing-Component_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="unpredictableWorkload" policyType="otptyIpatterns:Unpredictable-Workload_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="processingComponent" policyType="otptyIpatterns:Processing-Component_w1"/>
                 </Policies>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Platform-as-a-Service_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Platform-as-a-Service_w1-wip1" id="d_Platform-as-a-Service_w1-wip1_0" ns0:x="891" ns0:y="395">

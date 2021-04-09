@@ -7,9 +7,9 @@
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="statelessComponent" policyType="otpteIpatterns:Stateless-Component_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="horizontalScaling" policyType="otpteIpatterns:Horizontal-Scaling_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="eventDrivenConsumer" policyType="otpteIpatterns:Event-Driven-Consumer_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="horizontalScaling" policyType="otptyIpatterns:Horizontal-Scaling_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="eventDrivenConsumer" policyType="otptyIpatterns:Event-Driven-Consumer_w1"/>
                 </Policies>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Database_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Database_w1-wip1" id="d_Database_w1-wip1_0" ns0:x="1176" ns0:y="287">
@@ -21,7 +21,7 @@
                 <SourceElement ref="d_Application_w1-wip1_0"/>
                 <TargetElement ref="d_Database_w1-wip1_0"/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="secureChannel" policyType="otpteIpatterns:Secure-Channel_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
                 </Policies>
             </RelationshipTemplate>
         </Detector>
@@ -33,9 +33,9 @@
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="statelessComponent" policyType="otpteIpatterns:Stateless-Component_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="horizontalScaling" policyType="otpteIpatterns:Horizontal-Scaling_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="eventDrivenConsumer" policyType="otpteIpatterns:Event-Driven-Consumer_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="horizontalScaling" policyType="otptyIpatterns:Horizontal-Scaling_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="eventDrivenConsumer" policyType="otptyIpatterns:Event-Driven-Consumer_w1"/>
                 </Policies>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Database_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Database_w1-wip1" id="rs_Database_w1-wip1_0" ns0:x="1093" ns0:y="200">

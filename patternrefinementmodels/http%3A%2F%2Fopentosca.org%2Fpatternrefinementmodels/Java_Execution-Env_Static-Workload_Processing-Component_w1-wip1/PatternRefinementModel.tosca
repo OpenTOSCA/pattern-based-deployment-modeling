@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Java_Execution-Env_Static-Workload_Processing-Component_w1-wip1">
-    <PatternRefinementModel isPdrm="yes" name="Java_Execution-Env_Static-Workload_Processing-Component_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Java_Execution-Env_Static-Workload_Processing-Component_w1">
+    <PatternRefinementModel isPdrm="yes" name="Java_Execution-Env_Static-Workload_Processing-Component_w1" targetNamespace="http://opentosca.org/patternrefinementmodels">
         <Detector>
             <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Java-App" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1-wip1" id="d_Java-App_11-w1-wip1_0" ns0:x="831" ns0:y="201">
                 <Properties>
@@ -10,8 +10,8 @@
                     </properties>
                 </Properties>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="staticWorkload" policyType="otpteIpatterns:Static-Workload_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="processingComponent" policyType="otpteIpatterns:Processing-Component_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="staticWorkload" policyType="otptyIpatterns:Static-Workload_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="processingComponent" policyType="otptyIpatterns:Processing-Component_w1"/>
                 </Policies>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Execution-Environment_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Execution-Environment_w1-wip1" id="d_Execution-Environment_w1-wip1_0" ns0:x="907" ns0:y="347">

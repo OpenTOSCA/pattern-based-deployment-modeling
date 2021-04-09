@@ -8,9 +8,9 @@
     "secureCollection" : false,
     "generatedNamespace" : false
   },
-  "http://opentosca.org/policytemplates/patterns" : {
-    "namespace" : "http://opentosca.org/policytemplates/patterns",
-    "prefix" : "otpteIpatterns",
+  "http://opentosca.org/policytypes/patterns" : {
+    "namespace" : "http://opentosca.org/policytypes/patterns",
+    "prefix" : "otptyIpatterns",
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : true,

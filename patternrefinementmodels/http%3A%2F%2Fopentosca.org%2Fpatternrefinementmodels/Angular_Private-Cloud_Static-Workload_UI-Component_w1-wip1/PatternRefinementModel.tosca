@@ -12,8 +12,8 @@
                 <Requirements/>
                 <Capabilities/>
                 <Policies>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="staticWorkload" policyType="otpteIpatterns:Static-Workload_w1-wip1"/>
-                    <Policy xmlns:otpteIpatterns="http://opentosca.org/policytemplates/patterns" name="userInterfaceComponent" policyType="otpteIpatterns:User-Interface-Component_w1-wip1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="staticWorkload" policyType="otptyIpatterns:Static-Workload_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="userInterfaceComponent" policyType="otptyIpatterns:User-Interface-Component_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
