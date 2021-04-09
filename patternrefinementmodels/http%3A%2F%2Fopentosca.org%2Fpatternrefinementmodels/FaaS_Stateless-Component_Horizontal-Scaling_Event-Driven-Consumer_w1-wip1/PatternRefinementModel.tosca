@@ -15,7 +15,7 @@
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Public-Cloud_w1-wip2" minInstances="1" maxInstances="1" type="otntyIpatterns:Public-Cloud_w1-wip2" id="d_Public-Cloud_w1-wip2_0" ns0:x="825" ns0:y="638">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Public-Cloud_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Public-Cloud_w1" id="d_Public-Cloud_w1_0" ns0:x="825" ns0:y="638">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/patterns/propertiesdefinition/winery">
                         <account/>
@@ -27,26 +27,26 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Function-as-a-Service_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Function-as-a-Service_w1-wip1" id="d_Function-as-a-Service_w1-wip1_0" ns0:x="817" ns0:y="397">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Function-as-a-Service_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Function-as-a-Service_w1" id="d_Function-as-a-Service_w1_0" ns0:x="817" ns0:y="397">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
             </NodeTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_0">
                 <SourceElement ref="d_Application_w1-wip1_0"/>
-                <TargetElement ref="d_Function-as-a-Service_w1-wip1_0"/>
+                <TargetElement ref="d_Function-as-a-Service_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_1">
-                <SourceElement ref="d_Function-as-a-Service_w1-wip1_0"/>
-                <TargetElement ref="d_Public-Cloud_w1-wip2_0"/>
+                <SourceElement ref="d_Function-as-a-Service_w1_0"/>
+                <TargetElement ref="d_Public-Cloud_w1_0"/>
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
             <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:connectsTo_w1-wip1" direction="outgoing" detectorNode="d_Application_w1-wip1_0" refinementNode="rs_Application_w1-wip1_0" id="relMap0"/>
-            <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:hostedOn_w1-wip1" direction="ingoing" detectorNode="d_Public-Cloud_w1-wip2_0" refinementNode="rs_AWS_w1-wip1_0" id="relMap1"/>
+            <RelationMapping xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" relationType="otntyIgeneral:hostedOn_w1-wip1" direction="ingoing" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="relMap1"/>
         </RelationMappings>
         <PermutationMappings>
-            <PermutationMapping detectorNode="d_Public-Cloud_w1-wip2_0" refinementNode="rs_AWS_w1-wip1_0" id="permutationMap0"/>
+            <PermutationMapping detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="permutationMap0"/>
         </PermutationMappings>
         <RefinementStructure>
             <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Application_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Application_w1-wip1" id="rs_Application_w1-wip1_0" ns0:x="725" ns0:y="164">
@@ -92,8 +92,8 @@
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings>
-            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1-wip2_0" refinementNode="rs_AWS-Lambda_w1-wip1_0" id="propMap0"/>
-            <AttributeMapping type="selective" detectorProperty="location" refinementProperty="region" detectorNode="d_Public-Cloud_w1-wip2_0" refinementNode="rs_AWS_w1-wip1_0" id="propMap1"/>
+            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Lambda_w1-wip1_0" id="propMap0"/>
+            <AttributeMapping type="selective" detectorProperty="location" refinementProperty="region" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="propMap1"/>
         </AttributeMappings>
         <StayMappings>
             <StayMapping detectorNode="d_Application_w1-wip1_0" refinementNode="rs_Application_w1-wip1_0" id="stayMap0"/>

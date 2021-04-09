@@ -15,7 +15,7 @@
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Relational-Database_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Relational-Database_w1-wip1" id="d_Relational-Database_w1-wip1_0" ns0:x="1227" ns0:y="322">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Relational-Database_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Relational-Database_w1" id="d_Relational-Database_w1_0" ns0:x="1227" ns0:y="322">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
@@ -29,7 +29,7 @@
             </NodeTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="SQL-Connection_w1-wip1" type="otntyIgeneral:SQL-Connection_w1-wip1" id="d_con_SQL-Connection_w1-wip1_0">
                 <SourceElement ref="d_Application_w1-wip1_0"/>
-                <TargetElement ref="d_Relational-Database_w1-wip1_0"/>
+                <TargetElement ref="d_Relational-Database_w1_0"/>
                 <Policies>
                     <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
                 </Policies>
@@ -51,7 +51,7 @@
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Relational-Database_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Relational-Database_w1-wip1" id="rs_Relational-Database_w1-wip1_0" ns0:x="1201" ns0:y="222">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Relational-Database_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Relational-Database_w1" id="rs_Relational-Database_w1_0" ns0:x="1201" ns0:y="222">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
@@ -62,13 +62,13 @@
             </NodeTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-SQL-Connection_w1-wip1" type="otntyIgeneral:Secure-SQL-Connection_w1-wip1" id="rs_con_Secure-SQL-Connection_w1-wip1_1">
                 <SourceElement ref="rs_Application_w1-wip1_0"/>
-                <TargetElement ref="rs_Relational-Database_w1-wip1_0"/>
+                <TargetElement ref="rs_Relational-Database_w1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings/>
         <StayMappings>
             <StayMapping detectorNode="d_Application_w1-wip1_0" refinementNode="rs_Application_w1-wip1_0" id="StayMapping_0"/>
-            <StayMapping detectorNode="d_Relational-Database_w1-wip1_0" refinementNode="rs_Relational-Database_w1-wip1_0" id="stayMap0"/>
+            <StayMapping detectorNode="d_Relational-Database_w1_0" refinementNode="rs_Relational-Database_w1_0" id="stayMap0"/>
         </StayMappings>
         <DeploymentArtifactMappings/>
         <PermutationOptions/>

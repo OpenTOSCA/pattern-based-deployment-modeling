@@ -17,7 +17,7 @@
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Execution-Environment_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Execution-Environment_w1-wip1" id="d_Execution-Environment_w1-wip1_0" ns0:x="885" ns0:y="397">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Execution-Environment_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Execution-Environment_w1" id="d_Execution-Environment_w1_0" ns0:x="885" ns0:y="397">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
@@ -26,7 +26,7 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Private-Cloud_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Private-Cloud_w1-wip1" id="d_Private-Cloud_w1-wip1_0" ns0:x="897" ns0:y="626">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Private-Cloud_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Private-Cloud_w1" id="d_Private-Cloud_w1_0" ns0:x="897" ns0:y="626">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
@@ -37,11 +37,11 @@
             </NodeTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_0">
                 <SourceElement ref="d_Angular-Web-App_w1-wip2_0"/>
-                <TargetElement ref="d_Execution-Environment_w1-wip1_0"/>
+                <TargetElement ref="d_Execution-Environment_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_1">
-                <SourceElement ref="d_Execution-Environment_w1-wip1_0"/>
-                <TargetElement ref="d_Private-Cloud_w1-wip1_0"/>
+                <SourceElement ref="d_Execution-Environment_w1_0"/>
+                <TargetElement ref="d_Private-Cloud_w1_0"/>
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
@@ -110,7 +110,7 @@
             </BehaviorPatternMapping>
         </BehaviorPatternMappings>
         <PermutationMappings>
-            <PermutationMapping detectorNode="d_Private-Cloud_w1-wip1_0" refinementNode="rs_OpenStack_Victoria-w1-wip1_0" id="permutationMap0"/>
+            <PermutationMapping detectorNode="d_Private-Cloud_w1_0" refinementNode="rs_OpenStack_Victoria-w1-wip1_0" id="permutationMap0"/>
         </PermutationMappings>
     </PatternRefinementModel>
 </Definitions>

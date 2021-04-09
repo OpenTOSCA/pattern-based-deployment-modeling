@@ -7,14 +7,14 @@
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Blob-Storage_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Blob-Storage_w1-wip1" id="d_Blob-Storage_w1-wip1_0" ns0:x="1320" ns0:y="326">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Blob-Storage_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Blob-Storage_w1" id="d_Blob-Storage_w1_0" ns0:x="1320" ns0:y="326">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
             </NodeTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="BLOB-Storage-Connection_w1-wip1" type="otntyIgeneral:BLOB-Storage-Connection_w1-wip1" id="d_con_BLOB-Storage-Connection_w1-wip1_0">
                 <SourceElement ref="d_Application_w1-wip1_0"/>
-                <TargetElement ref="d_Blob-Storage_w1-wip1_0"/>
+                <TargetElement ref="d_Blob-Storage_w1_0"/>
                 <Policies>
                     <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
                 </Policies>
@@ -44,7 +44,7 @@
         <AttributeMappings/>
         <StayMappings>
             <StayMapping detectorNode="d_Application_w1-wip1_0" refinementNode="rs_Application_w1-wip1_0" id="StayMapping_0"/>
-            <StayMapping detectorNode="d_Blob-Storage_w1-wip1_0" refinementNode="rs_MinIO_w1-wip1_0" id="StayMapping_1"/>
+            <StayMapping detectorNode="d_Blob-Storage_w1_0" refinementNode="rs_MinIO_w1-wip1_0" id="StayMapping_1"/>
         </StayMappings>
         <DeploymentArtifactMappings/>
         <PermutationOptions/>

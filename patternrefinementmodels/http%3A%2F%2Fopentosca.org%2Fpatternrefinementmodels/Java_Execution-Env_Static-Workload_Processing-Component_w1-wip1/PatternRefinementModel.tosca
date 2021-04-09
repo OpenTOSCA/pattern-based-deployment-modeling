@@ -14,7 +14,7 @@
                     <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="processingComponent" policyType="otptyIpatterns:Processing-Component_w1"/>
                 </Policies>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Execution-Environment_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Execution-Environment_w1-wip1" id="d_Execution-Environment_w1-wip1_0" ns0:x="907" ns0:y="347">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Execution-Environment_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Execution-Environment_w1" id="d_Execution-Environment_w1_0" ns0:x="907" ns0:y="347">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
@@ -39,14 +39,14 @@
             </NodeTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_0">
                 <SourceElement ref="d_Java-App_11-w1-wip1_0"/>
-                <TargetElement ref="d_Execution-Environment_w1-wip1_0"/>
+                <TargetElement ref="d_Execution-Environment_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_1">
                 <SourceElement ref="d_Ubuntu_20.04-w1-wip1_0"/>
                 <TargetElement ref="d_OpenStack_Victoria-w1-wip1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="hostedOn_w1-wip1" type="otntyIgeneral:hostedOn_w1-wip1" id="d_con_hostedOn_w1-wip1_2">
-                <SourceElement ref="d_Execution-Environment_w1-wip1_0"/>
+                <SourceElement ref="d_Execution-Environment_w1_0"/>
                 <TargetElement ref="d_Ubuntu_20.04-w1-wip1_0"/>
             </RelationshipTemplate>
         </Detector>

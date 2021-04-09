@@ -13,7 +13,7 @@
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Point-to-Point-Channel_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Point-to-Point-Channel_w1-wip1" id="d_Point-to-Point-Channel_w1-wip1_0" ns0:x="1335" ns0:y="262">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Point-to-Point-Channel_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Point-to-Point-Channel_w1" id="d_Point-to-Point-Channel_w1_0" ns0:x="1335" ns0:y="262">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
@@ -27,7 +27,7 @@
             </NodeTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Queue-Connection_w1-wip1" type="otntyIgeneral:Queue-Connection_w1-wip1" id="d_con_Queue-Connection_w1-wip1_1">
                 <SourceElement ref="d_Application_w1-wip1_0"/>
-                <TargetElement ref="d_Point-to-Point-Channel_w1-wip1_0"/>
+                <TargetElement ref="d_Point-to-Point-Channel_w1_0"/>
                 <Policies>
                     <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
                 </Policies>
@@ -47,7 +47,7 @@
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Point-to-Point-Channel_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Point-to-Point-Channel_w1-wip1" id="rs_Point-to-Point-Channel_w1-wip1_0" ns0:x="1157" ns0:y="243">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Point-to-Point-Channel_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Point-to-Point-Channel_w1" id="rs_Point-to-Point-Channel_w1_0" ns0:x="1157" ns0:y="243">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>
@@ -58,13 +58,13 @@
             </NodeTemplate>
             <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otntyIgeneral:Secure-Queue-Connection_w1-wip1" id="rs_con_Secure-Queue-Connection_w1-wip1_1">
                 <SourceElement ref="rs_Application_w1-wip1_0"/>
-                <TargetElement ref="rs_Point-to-Point-Channel_w1-wip1_0"/>
+                <TargetElement ref="rs_Point-to-Point-Channel_w1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings/>
         <StayMappings>
             <StayMapping detectorNode="d_Application_w1-wip1_0" refinementNode="rs_Application_w1-wip1_0" id="StayMapping_0"/>
-            <StayMapping detectorNode="d_Point-to-Point-Channel_w1-wip1_0" refinementNode="rs_Point-to-Point-Channel_w1-wip1_0" id="stayMap0"/>
+            <StayMapping detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_Point-to-Point-Channel_w1_0" id="stayMap0"/>
         </StayMappings>
         <DeploymentArtifactMappings/>
         <PermutationOptions/>
