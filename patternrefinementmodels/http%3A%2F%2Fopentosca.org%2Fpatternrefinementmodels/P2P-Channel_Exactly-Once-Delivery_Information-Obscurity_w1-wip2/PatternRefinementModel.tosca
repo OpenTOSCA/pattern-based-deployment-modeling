@@ -41,8 +41,8 @@
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" typeRef="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1-wip1_0" id="relMap1"/>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" typeRef="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_Public-Cloud_w1_0" id="relMap2"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1-wip1_0" id="relMap1"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_Public-Cloud_w1_0" id="relMap2"/>
         </RelationMappings>
         <PermutationMappings>
             <PermutationMapping detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1-wip1_0" id="permutationMap0"/>
