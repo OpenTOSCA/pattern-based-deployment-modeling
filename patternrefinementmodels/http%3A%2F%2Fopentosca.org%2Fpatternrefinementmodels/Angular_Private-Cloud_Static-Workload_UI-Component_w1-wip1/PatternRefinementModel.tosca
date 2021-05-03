@@ -45,7 +45,7 @@
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" typeRef="ToscaBaseTypes:ConnectsTo" direction="outgoing" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Angular-Web-App_w1-wip2_0" id="relMap0"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="outgoing" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Angular-Web-App_w1-wip2_0" id="relMap0"/>
         </RelationMappings>
         <PermutationMappings/>
         <RefinementStructure>

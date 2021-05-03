@@ -18,8 +18,8 @@
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" typeRef="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_MySQL-Database_8-w1-wip1_0" id="relMap0"/>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" typeRef="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Private-Cloud_w1_0" refinementNode="rs_Windows-Server_2019-w1-wip1_0" id="relMap1"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_MySQL-Database_8-w1-wip1_0" id="relMap0"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Private-Cloud_w1_0" refinementNode="rs_Windows-Server_2019-w1-wip1_0" id="relMap1"/>
         </RelationMappings>
         <PermutationMappings>
             <PermutationMapping detectorNode="d_Relational-Database_w1_0" refinementNode="rs_MySQL-Database_8-w1-wip1_0" id="permutationMap0"/>
