@@ -2,19 +2,25 @@
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Secure-Channel-BLOB_w1-wip1">
     <PatternRefinementModel isPdrm="yes" name="Secure-Channel-BLOB_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
         <Detector>
-            <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Application_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Application_w1-wip1" id="d_Application_w1-wip1_0" ns0:x="798" ns0:y="338">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Java-App" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1-wip1" id="d_Java-App_11-w1-wip1_0" ns0:x="892" ns0:y="363">
                 <Properties>
-                    <Properties xmlns="http://www.example.org"/>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <maxHeap/>
+                        <port/>
+                    </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Blob-Storage_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Blob-Storage_w1" id="d_Blob-Storage_w1_0" ns0:x="1320" ns0:y="326">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MinIO_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:MinIO_w1-wip1" id="d_MinIO_w1-wip1_0" ns0:x="1444" ns0:y="343">
                 <Properties>
-                    <Properties xmlns="http://www.example.org"/>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <serverSideEncryption/>
+                        <masterKey/>
+                    </properties>
                 </Properties>
             </NodeTemplate>
-            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="BLOB-Storage-Connection_w1-wip1" type="otrtyIgeneral:BLOB-Storage-Connection_w1-wip1" id="d_con_BLOB-Storage-Connection_w1-wip1_0">
-                <SourceElement ref="d_Application_w1-wip1_0"/>
-                <TargetElement ref="d_Blob-Storage_w1_0"/>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="BLOB-Storage-Connection_w1-wip1" type="otntyIgeneral:BLOB-Storage-Connection_w1-wip1" id="d_con_BLOB-Storage-Connection_w1-wip1_0">
+                <SourceElement ref="d_Java-App_11-w1-wip1_0"/>
+                <TargetElement ref="d_MinIO_w1-wip1_0"/>
                 <Policies>
                     <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
                 </Policies>
@@ -23,12 +29,15 @@
         <RelationMappings/>
         <PermutationMappings/>
         <RefinementStructure>
-            <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Application_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Application_w1-wip1" id="rs_Application_w1-wip1_0" ns0:x="623" ns0:y="223">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Java-App" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1-wip1" id="rs_Java-App_11-w1-wip1_0" ns0:x="532" ns0:y="371">
                 <Properties>
-                    <Properties xmlns="http://www.example.org"/>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <maxHeap/>
+                        <port/>
+                    </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MinIO_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:MinIO_w1-wip1" id="rs_MinIO_w1-wip1_0" ns0:x="1186" ns0:y="222">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MinIO_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:MinIO_w1-wip1" id="rs_MinIO_w1-wip1_0" ns0:x="1108" ns0:y="365">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <serverSideEncryption/>
@@ -36,15 +45,15 @@
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-BLOB-Storage-Connection_w1-wip1" type="otrtyIgeneral:Secure-BLOB-Storage-Connection_w1-wip1" id="rs_con_Secure-BLOB-Storage-Connection_w1-wip1_0">
-                <SourceElement ref="rs_Application_w1-wip1_0"/>
+            <RelationshipTemplate xmlns:otntyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-BLOB-Storage-Connection_w1-wip1" type="otntyIgeneral:Secure-BLOB-Storage-Connection_w1-wip1" id="rs_con_Secure-BLOB-Storage-Connection_w1-wip1_0">
+                <SourceElement ref="rs_Java-App_11-w1-wip1_0"/>
                 <TargetElement ref="rs_MinIO_w1-wip1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings/>
         <StayMappings>
-            <StayMapping detectorNode="d_Application_w1-wip1_0" refinementNode="rs_Application_w1-wip1_0" id="StayMapping_0"/>
-            <StayMapping detectorNode="d_Blob-Storage_w1_0" refinementNode="rs_MinIO_w1-wip1_0" id="StayMapping_1"/>
+            <StayMapping detectorNode="d_Java-App_11-w1-wip1_0" refinementNode="rs_Java-App_11-w1-wip1_0" id="stayMap0"/>
+            <StayMapping detectorNode="d_MinIO_w1-wip1_0" refinementNode="rs_MinIO_w1-wip1_0" id="stayMap1"/>
         </StayMappings>
         <DeploymentArtifactMappings/>
         <PermutationOptions/>
