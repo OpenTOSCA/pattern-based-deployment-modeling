@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/servicetemplates" id="winery-defs-for_otsteIgeneral-Document-Processor_w1-wip1-detected-w1-wip1">
+    <ServiceTemplate name="Document-Processor_w1-wip1-detected-w1-wip1" targetNamespace="http://opentosca.org/servicetemplates" id="Document-Processor_w1-wip1-detected-w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Document Frontend" minInstances="1" maxInstances="1" type="otntyIgeneral1:Angular-Web-App_w1-wip2" id="Angular-Web-App_w1-wip2_0" winery:x="99" winery:y="152">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <context/>
+                        <port>4200</port>
+                    </Properties>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="staticWorkload" policyType="otptyIpatterns:Static-Workload_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="userInterfaceComponent" policyType="otptyIpatterns:User-Interface-Component_w1"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Document Processor" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1-wip1" id="Java-App_11-w1-wip1_0" winery:x="793" winery:y="145">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <maxHeap/>
+                        <port>8080</port>
+                    </Properties>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="unpredictableWorkload" policyType="otptyIpatterns:Unpredictable-Workload_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="processingComponent" policyType="otptyIpatterns:Processing-Component_w1"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Result Processor" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1-wip1" id="Java-App_11-w1-wip1_1" winery:x="1522" winery:y="140">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <maxHeap/>
+                        <port>8081</port>
+                    </Properties>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="staticWorkload" policyType="otptyIpatterns:Static-Workload_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="processingComponent" policyType="otptyIpatterns:Processing-Component_w1"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Point-to-Point-Channel_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Point-to-Point-Channel_w1" id="d_Point-to-Point-Channel_w1_0" winery:x="1225" winery:y="144">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Information-Obscurity_w1"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Message-oriented-Middleware_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Message-oriented-Middleware_w1" id="d_Message-oriented-Middleware_w1_0" winery:x="1228" winery:y="298">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Point-to-Point-Channel_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Point-to-Point-Channel_w1" id="d_Point-to-Point-Channel_w1_0-new" winery:x="475" winery:y="149">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="exactlyOnceDelivery" policyType="otptyIpatterns:Exactly-once-Delivery_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Information-Obscurity_w1"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Message-oriented-Middleware_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Message-oriented-Middleware_w1" id="d_Message-oriented-Middleware_w1_0-new" winery:x="480" winery:y="337">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Execution-Environment_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Execution-Environment_w1" id="d_Execution-Environment_w1_0" winery:x="1600" winery:y="286">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Execution-Environment_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Execution-Environment_w1" id="d_Execution-Environment_w1_0-new" winery:x="165" winery:y="351">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Private-Cloud_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Private-Cloud_w1" id="d_Private-Cloud_w1_0" winery:x="177" winery:y="580">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Platform-as-a-Service_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Platform-as-a-Service_w1" id="d_Platform-as-a-Service_w1_0" winery:x="873" winery:y="309">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Public-Cloud_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Public-Cloud_w1" id="d_Public-Cloud_w1_0" winery:x="858" winery:y="572">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/patterns/propertiesdefinition/winery">
+                        <account>ustutt</account>
+                        <location>eu-central-1</location>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Relational-Database_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Relational-Database_w1" id="d_Relational-Database_w1_0" winery:x="1988" winery:y="130">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Private-Cloud_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Private-Cloud_w1" id="d_Private-Cloud_w1_0-new" winery:x="1795" winery:y="573">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="SQL-Connection_w1-wip1" type="otrtyIgeneral:SQL-Connection_w1-wip1" id="d_con_SQL-Connection_w1-wip1_0">
+                <SourceElement ref="Java-App_11-w1-wip1_1"/>
+                <TargetElement ref="d_Relational-Database_w1_0"/>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
+                </Policies>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Queue-Connection_w1-wip1" type="otrtyIgeneral:Queue-Connection_w1-wip1" id="d_con_Queue-Connection_w1-wip1_0">
+                <SourceElement ref="Java-App_11-w1-wip1_1"/>
+                <TargetElement ref="d_Point-to-Point-Channel_w1_0"/>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
+                </Policies>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Queue-Connection_w1-wip1" type="otrtyIgeneral:Queue-Connection_w1-wip1" id="d_con_Queue-Connection_w1-wip1_0-new">
+                <SourceElement ref="Java-App_11-w1-wip1_0"/>
+                <TargetElement ref="d_Point-to-Point-Channel_w1_0"/>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
+                </Policies>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Queue-Connection_w1-wip1" type="otrtyIgeneral:Queue-Connection_w1-wip1" id="d_con_Queue-Connection_w1-wip1_0-new-new">
+                <SourceElement ref="Java-App_11-w1-wip1_0"/>
+                <TargetElement ref="d_Point-to-Point-Channel_w1_0-new"/>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
+                </Policies>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Queue-Connection_w1-wip1" type="otrtyIgeneral:Queue-Connection_w1-wip1" id="d_con_Queue-Connection_w1-wip1_0-new-new-new">
+                <SourceElement ref="Angular-Web-App_w1-wip2_0"/>
+                <TargetElement ref="d_Point-to-Point-Channel_w1_0-new"/>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
+                </Policies>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0">
+                <SourceElement ref="d_Point-to-Point-Channel_w1_0"/>
+                <TargetElement ref="d_Message-oriented-Middleware_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_1">
+                <SourceElement ref="d_Message-oriented-Middleware_w1_0"/>
+                <TargetElement ref="d_Public-Cloud_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0-new">
+                <SourceElement ref="d_Point-to-Point-Channel_w1_0-new"/>
+                <TargetElement ref="d_Message-oriented-Middleware_w1_0-new"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_1-new">
+                <SourceElement ref="d_Message-oriented-Middleware_w1_0-new"/>
+                <TargetElement ref="d_Public-Cloud_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0-new-new">
+                <SourceElement ref="Java-App_11-w1-wip1_1"/>
+                <TargetElement ref="d_Execution-Environment_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_2">
+                <SourceElement ref="d_Execution-Environment_w1_0"/>
+                <TargetElement ref="d_Private-Cloud_w1_0-new"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0-new-new-new">
+                <SourceElement ref="Angular-Web-App_w1-wip2_0"/>
+                <TargetElement ref="d_Execution-Environment_w1_0-new"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_1-new-new-new">
+                <SourceElement ref="d_Execution-Environment_w1_0-new"/>
+                <TargetElement ref="d_Private-Cloud_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0-new-new-new-new">
+                <SourceElement ref="Java-App_11-w1-wip1_0"/>
+                <TargetElement ref="d_Platform-as-a-Service_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_1-new-new-new-new">
+                <SourceElement ref="d_Platform-as-a-Service_w1_0"/>
+                <TargetElement ref="d_Public-Cloud_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0-new-new-new-new-new">
+                <SourceElement ref="d_Relational-Database_w1_0"/>
+                <TargetElement ref="d_Private-Cloud_w1_0-new"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
