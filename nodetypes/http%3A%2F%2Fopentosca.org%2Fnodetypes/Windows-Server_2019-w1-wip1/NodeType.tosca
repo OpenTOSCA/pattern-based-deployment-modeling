@@ -11,6 +11,6 @@
                 <ns0:type>xsd:string</ns0:type>
             </ns0:properties>
         </ns0:PropertiesDefinition>
-        <DerivedFrom xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" typeRef="otntyIabstract:Virtual-Machine_w1-wip1"/>
+        <DerivedFrom xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" typeRef="ntyIgeneral:Compute"/>
     </NodeType>
 </Definitions>

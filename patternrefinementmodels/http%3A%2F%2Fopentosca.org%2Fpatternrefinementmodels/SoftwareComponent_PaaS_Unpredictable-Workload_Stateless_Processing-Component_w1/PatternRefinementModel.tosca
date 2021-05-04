@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-FaaS_Stateless-Component_Horizontal-Scaling_Event-Driven-Consumer_w1">
-    <PatternRefinementModel isPdrm="yes" name="FaaS_Stateless-Component_Horizontal-Scaling_Event-Driven-Consumer_w1" targetNamespace="http://opentosca.org/patternrefinementmodels">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-SoftwareComponent_PaaS_Unpredictable-Workload_Stateless_Processing-Component_w1">
+    <PatternRefinementModel isPdrm="yes" name="SoftwareComponent_PaaS_Unpredictable-Workload_Stateless_Processing-Component_w1" targetNamespace="http://opentosca.org/patternrefinementmodels">
         <Detector>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Public-Cloud_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Public-Cloud_w1" id="d_Public-Cloud_w1_0" winery:x="825" winery:y="638">
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Platform-as-a-Service_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Platform-as-a-Service_w1" id="d_Platform-as-a-Service_w1_0" winery:x="891" winery:y="395">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Public-Cloud_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Public-Cloud_w1" id="d_Public-Cloud_w1_0" winery:x="867" winery:y="632">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/patterns/propertiesdefinition/winery">
                         <account/>
@@ -14,16 +23,7 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Function-as-a-Service_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Function-as-a-Service_w1" id="d_Function-as-a-Service_w1_0" winery:x="817" winery:y="397">
-                <Properties>
-                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
-                </Properties>
-                <Requirements/>
-                <Capabilities/>
-                <Policies/>
-                <DeploymentArtifacts/>
-            </NodeTemplate>
-            <NodeTemplate xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" name="SoftwareComponent" minInstances="1" maxInstances="1" type="ntyIgeneral:SoftwareComponent" id="d_SoftwareComponent_0" winery:x="741" winery:y="181">
+            <NodeTemplate xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" name="SoftwareComponent" minInstances="1" maxInstances="1" type="ntyIgeneral:SoftwareComponent" id="d_SoftwareComponent_0" winery:x="839" winery:y="158">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <component_version/>
@@ -31,17 +31,17 @@
                     </properties>
                 </Properties>
                 <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="unpredictableWorkload" policyType="otptyIpatterns:Unpredictable-Workload_w1"/>
                     <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
-                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="horizontalScaling" policyType="otptyIpatterns:Horizontal-Scaling_w1"/>
-                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="eventDrivenConsumer" policyType="otptyIpatterns:Event-Driven-Consumer_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="processingComponent" policyType="otptyIpatterns:Processing-Component_w1"/>
                 </Policies>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0">
                 <SourceElement ref="d_SoftwareComponent_0"/>
-                <TargetElement ref="d_Function-as-a-Service_w1_0"/>
+                <TargetElement ref="d_Platform-as-a-Service_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_1">
-                <SourceElement ref="d_Function-as-a-Service_w1_0"/>
+                <SourceElement ref="d_Platform-as-a-Service_w1_0"/>
                 <TargetElement ref="d_Public-Cloud_w1_0"/>
             </RelationshipTemplate>
         </Detector>
@@ -53,28 +53,19 @@
             <PermutationMapping detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="permutationMap0"/>
         </PermutationMappings>
         <RefinementStructure>
-            <NodeTemplate xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" name="SoftwareComponent" minInstances="1" maxInstances="1" type="ntyIgeneral:SoftwareComponent" id="rs_SoftwareComponent_0" winery:x="741" winery:y="181">
+            <NodeTemplate xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" name="SoftwareComponent" minInstances="1" maxInstances="1" type="ntyIgeneral:SoftwareComponent" id="rs_SoftwareComponent_0" winery:x="839" winery:y="158">
                 <Properties>
                     <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Lambda-Function_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Lambda-Function_w1-wip1" id="rs_Lambda-Function_w1-wip1_0" winery:x="738" winery:y="330">
-                <Properties>
-                    <Properties xmlns="http://www.example.org">
-                        <codeSigning/>
-                        <trigger>onSQSmessage</trigger>
-                        <permissions/>
-                    </Properties>
-                </Properties>
-            </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Lambda_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Lambda_w1-wip1" id="rs_AWS-Lambda_w1-wip1_0" winery:x="749" winery:y="629">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Elastic-Beanstalk_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Elastic-Beanstalk_w1-wip1" id="rs_AWS-Elastic-Beanstalk_w1-wip1_0" winery:x="868" winery:y="502">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <account/>
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS_w1-wip1" id="rs_AWS_w1-wip1_0" winery:x="755" winery:y="851">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS_w1-wip1" id="rs_AWS_w1-wip1_0" winery:x="910" winery:y="723">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <region/>
@@ -82,21 +73,31 @@
                     </properties>
                 </Properties>
             </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Elastic-Beanstalk-Worker-Environment_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Elastic-Beanstalk-Worker-Environment_w1-wip1" id="rs_Elastic-Beanstalk-Worker-Environment_w1-wip1_0" winery:x="817" winery:y="330">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <envType>balanced</envType>
+                        <scalingMetric/>
+                        <timespan/>
+                        <instances/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
                 <SourceElement ref="rs_SoftwareComponent_0"/>
-                <TargetElement ref="rs_Lambda-Function_w1-wip1_0"/>
+                <TargetElement ref="rs_Elastic-Beanstalk-Worker-Environment_w1-wip1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
-                <SourceElement ref="rs_Lambda-Function_w1-wip1_0"/>
-                <TargetElement ref="rs_AWS-Lambda_w1-wip1_0"/>
+                <SourceElement ref="rs_AWS-Elastic-Beanstalk_w1-wip1_0"/>
+                <TargetElement ref="rs_AWS_w1-wip1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_2">
-                <SourceElement ref="rs_AWS-Lambda_w1-wip1_0"/>
-                <TargetElement ref="rs_AWS_w1-wip1_0"/>
+                <SourceElement ref="rs_Elastic-Beanstalk-Worker-Environment_w1-wip1_0"/>
+                <TargetElement ref="rs_AWS-Elastic-Beanstalk_w1-wip1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings>
-            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Lambda_w1-wip1_0" id="propMap0"/>
+            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Elastic-Beanstalk_w1-wip1_0" id="propMap0"/>
             <AttributeMapping type="selective" detectorProperty="location" refinementProperty="region" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="propMap1"/>
         </AttributeMappings>
         <StayMappings>
@@ -105,8 +106,8 @@
         <DeploymentArtifactMappings/>
         <PermutationOptions/>
         <BehaviorPatternMappings>
-            <BehaviorPatternMapping behaviorPattern="eventDrivenConsumer" detectorNode="d_SoftwareComponent_0" refinementNode="rs_Lambda-Function_w1-wip1_0" id="behaviorPatternMap0">
-                <Property key="trigger" value="onSQSmessage"/>
+            <BehaviorPatternMapping behaviorPattern="unpredictableWorkload" detectorNode="d_SoftwareComponent_0" refinementNode="rs_Elastic-Beanstalk-Worker-Environment_w1-wip1_0" id="behaviorPatternMap0">
+                <Property key="envType" value="balanced"/>
             </BehaviorPatternMapping>
         </BehaviorPatternMappings>
     </PatternRefinementModel>

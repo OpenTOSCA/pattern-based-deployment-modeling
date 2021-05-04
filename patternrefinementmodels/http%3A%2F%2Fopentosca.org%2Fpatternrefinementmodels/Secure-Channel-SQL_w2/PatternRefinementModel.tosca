@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Secure-Channel-SQL_w2">
+    <PatternRefinementModel isPdrm="yes" name="Secure-Channel-SQL_w2" targetNamespace="http://opentosca.org/patternrefinementmodels">
+        <Detector>
+             <NodeTemplate xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" name="SoftwareComponent" minInstances="1" maxInstances="1" type="ntyIgeneral:SoftwareComponent" id="d_SoftwareComponent_0" winery:x="572" winery:y="200">>
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="horizontalScaling" policyType="otptyIpatterns:Horizontal-Scaling_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="eventDrivenConsumer" policyType="otptyIpatterns:Event-Driven-Consumer_w1"/>
+                </Policies>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" name="Database" minInstances="1" maxInstances="1" type="ntyIgeneral:Database" id="d_Database_0" winery:x="1177" winery:y="286">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <name/>
+                        <port/>
+                        <user/>
+                        <password/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="SQL-Connection_w1-wip1" type="otrtyIgeneral:SQL-Connection_w1-wip1" id="d_con_SQL-Connection_w1-wip1_0">
+                <SourceElement ref="d_SoftwareComponent_0"/>
+                <TargetElement ref="d_Database_0"/>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="secureChannel" policyType="otptyIpatterns:Secure-Channel_w1"/>
+                </Policies>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings/>
+        <PermutationMappings/>
+        <RefinementStructure>
+            <NodeTemplate xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" name="Database" minInstances="1" maxInstances="1" type="ntyIgeneral:Database" id="rs_Database_0" winery:x="1177" winery:y="286">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <name/>
+                        <port/>
+                        <user/>
+                        <password/>
+                    </properties>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" name="SoftwareComponent" minInstances="1" maxInstances="1" type="ntyIgeneral:SoftwareComponent" id="rs_SoftwareComponent_0" winery:x="572" winery:y="200">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <component_version/>
+                        <admin_credential/>
+                    </properties>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="statelessComponent" policyType="otptyIpatterns:Stateless-Component_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="horizontalScaling" policyType="otptyIpatterns:Horizontal-Scaling_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="eventDrivenConsumer" policyType="otptyIpatterns:Event-Driven-Consumer_w1"/>
+                </Policies>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-SQL-Connection_w1-wip1" type="otrtyIgeneral:Secure-SQL-Connection_w1-wip1" id="rs_con_Secure-SQL-Connection_w1-wip1_0">
+                <SourceElement ref="rs_SoftwareComponent_0"/>
+                <TargetElement ref="rs_Database_0"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <AttributeMappings/>
+        <StayMappings>
+            <StayMapping detectorNode="d_SoftwareComponent_0" refinementNode="rs_SoftwareComponent_0" id="StayMapping_0"/>
+            <StayMapping detectorNode="d_Database_0" refinementNode="rs_Database_0" id="StayMapping_1"/>
+        </StayMappings>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings/>
+    </PatternRefinementModel>
+</Definitions>
