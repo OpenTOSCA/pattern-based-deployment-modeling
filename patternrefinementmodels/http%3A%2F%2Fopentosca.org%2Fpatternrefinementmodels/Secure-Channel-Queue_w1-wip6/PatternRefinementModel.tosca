@@ -23,7 +23,7 @@
                 <Capabilities/>
                 <Policies>
                     <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="exactlyOnceDelivery" policyType="otptyIpatterns:Exactly-once-Delivery_w1"/>
-                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Idempotent-Processor_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Information-Obscurity_w1"/>
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
@@ -57,7 +57,7 @@
                 </Properties>
                 <Policies>
                     <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="exactlyOnceDelivery" policyType="otptyIpatterns:Exactly-once-Delivery_w1"/>
-                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Idempotent-Processor_w1"/>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="informationObscurity" policyType="otptyIpatterns:Information-Obscurity_w1"/>
                 </Policies>
             </NodeTemplate>
             <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1-wip1" type="otrtyIgeneral:Secure-Queue-Connection_w1-wip1" id="rs_con_Secure-Queue-Connection_w1-wip1_1">
