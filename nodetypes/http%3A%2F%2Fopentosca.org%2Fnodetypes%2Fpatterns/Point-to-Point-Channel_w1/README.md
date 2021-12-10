@@ -1,4 +1,4 @@
-# Point-to-Point Channel Pattern [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![PatternAtlas](https://raw.githubusercontent.com/OpenTOSCA/pattern-based-deployment-modeling/fix/relation-mappings/PatternAtlas.svg)](http://localhost:4203/pattern-languages/f6b807aa-5905-4435-aec6-324355a0483f/https%25253A%25252F%25252Fpatternpedia.org%25252FpatternLanguages%25252Feip%25252Fpoint-to-pointChannel)  
+# Point-to-Point Channel Pattern [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![PatternAtlas](https://raw.githubusercontent.com/OpenTOSCA/pattern-based-deployment-modeling/fix/relation-mappings/PatternAtlas.svg)](http://localhost:1978/pattern-languages/f6b807aa-5905-4435-aec6-324355a0483f/https%25253A%25252F%25252Fpatternpedia.org%25252FpatternLanguages%25252Feip%25252Fpoint-to-pointChannel)  
 
 > This Node Type represents the Point-to-Point Channel pattern from the Enterprise Integration Patterns.
 
