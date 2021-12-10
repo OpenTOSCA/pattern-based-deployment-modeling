@@ -18,22 +18,22 @@
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_MySQL-Database_8-w1-wip1_0" id="relMap0"/>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Private-Cloud_w1_0" refinementNode="rs_Windows-Server_2019-w1-wip1_0" id="relMap1"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_MySQL-Database_8-w1_0" id="relMap0"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Private-Cloud_w1_0" refinementNode="rs_Windows-Server_2019-w1_0" id="relMap1"/>
         </RelationMappings>
         <PermutationMappings>
-            <PermutationMapping detectorNode="d_Relational-Database_w1_0" refinementNode="rs_MySQL-Database_8-w1-wip1_0" id="permutationMap0"/>
-            <PermutationMapping detectorNode="d_Private-Cloud_w1_0" refinementNode="rs_vSphere_7.0-w1-wip1_0" id="permutationMap1"/>
+            <PermutationMapping detectorNode="d_Relational-Database_w1_0" refinementNode="rs_MySQL-Database_8-w1_0" id="permutationMap0"/>
+            <PermutationMapping detectorNode="d_Private-Cloud_w1_0" refinementNode="rs_vSphere_7.0-w1_0" id="permutationMap1"/>
         </PermutationMappings>
         <RefinementStructure>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="vSphere" minInstances="1" maxInstances="1" type="otntyIgeneral1:vSphere_7.0-w1-wip1" id="rs_vSphere_7.0-w1-wip1_0" ns0:x="764" ns0:y="647">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="vSphere" minInstances="1" maxInstances="1" type="otntyIgeneral1:vSphere_7.0-w1" id="rs_vSphere_7.0-w1_0" ns0:x="764" ns0:y="647">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <api/>
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Windows-Server" minInstances="1" maxInstances="1" type="otntyIgeneral1:Windows-Server_2019-w1-wip1" id="rs_Windows-Server_2019-w1-wip1_0" ns0:x="761" ns0:y="496">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Windows-Server" minInstances="1" maxInstances="1" type="otntyIgeneral1:Windows-Server_2019-w1" id="rs_Windows-Server_2019-w1_0" ns0:x="761" ns0:y="496">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <ram/>
@@ -41,14 +41,14 @@
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MySQL-Database" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-Database_8-w1-wip1" id="rs_MySQL-Database_8-w1-wip1_0" ns0:x="804" ns0:y="107">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MySQL-Database" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-Database_8-w1" id="rs_MySQL-Database_8-w1_0" ns0:x="804" ns0:y="107">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <dbName/>
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MySQL-DBMS" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-DBMS_8-w1-wip1" id="rs_MySQL-DBMS_8-w1-wip1_0" ns0:x="754" ns0:y="289">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MySQL-DBMS" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-DBMS_8-w1" id="rs_MySQL-DBMS_8-w1_0" ns0:x="754" ns0:y="289">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <port/>
@@ -57,16 +57,16 @@
                 </Properties>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
-                <SourceElement ref="rs_MySQL-Database_8-w1-wip1_0"/>
-                <TargetElement ref="rs_MySQL-DBMS_8-w1-wip1_0"/>
+                <SourceElement ref="rs_MySQL-Database_8-w1_0"/>
+                <TargetElement ref="rs_MySQL-DBMS_8-w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
-                <SourceElement ref="rs_MySQL-DBMS_8-w1-wip1_0"/>
-                <TargetElement ref="rs_Windows-Server_2019-w1-wip1_0"/>
+                <SourceElement ref="rs_MySQL-DBMS_8-w1_0"/>
+                <TargetElement ref="rs_Windows-Server_2019-w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_2">
-                <SourceElement ref="rs_Windows-Server_2019-w1-wip1_0"/>
-                <TargetElement ref="rs_vSphere_7.0-w1-wip1_0"/>
+                <SourceElement ref="rs_Windows-Server_2019-w1_0"/>
+                <TargetElement ref="rs_vSphere_7.0-w1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings/>

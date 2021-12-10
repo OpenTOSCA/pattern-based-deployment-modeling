@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/servicetemplates" id="winery-defs-for_otsteIgeneral-Document-Processor_w1">
+    <ServiceTemplate name="Document-Processor_w1" targetNamespace="http://opentosca.org/servicetemplates" id="Document-Processor_w1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Document Frontend" minInstances="1" maxInstances="1" type="otntyIgeneral1:Angular-Web-App_w1" id="Angular-Web-App_w1_0" ns0:x="99" ns0:y="152">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <context/>
+                        <port>4200</port>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Input Queue" minInstances="1" maxInstances="1" type="otntyIgeneral1:SQS-Queue_w1" id="SQS-Queue_w1_0" ns0:x="450" ns0:y="149">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <type>FIFO</type>
+                        <serverSideEncryption>yes</serverSideEncryption>
+                        <masterKey>default</masterKey>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Document Processor" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1" id="Java-App_11-w1_0" ns0:x="793" ns0:y="145">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <maxHeap/>
+                        <port>8080</port>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Output Queue" minInstances="1" maxInstances="1" type="otntyIgeneral1:SQS-Queue_w1" id="SQS-Queue_w1_1" ns0:x="1176" ns0:y="145">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <type/>
+                        <serverSideEncryption>yes</serverSideEncryption>
+                        <masterKey>default</masterKey>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Result Processor" minInstances="1" maxInstances="1" type="otntyIgeneral1:Java-App_11-w1" id="Java-App_11-w1_1" ns0:x="1522" ns0:y="140">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <maxHeap/>
+                        <port>8081</port>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Database" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-Database_8-w1" id="MySQL-Database_8-w1_0" ns0:x="1890" ns0:y="139">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <dbName>database</dbName>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Webserver" minInstances="1" maxInstances="1" type="otntyIgeneral1:Tomcat_10-w1" id="Tomcat_10-w1_0" ns0:x="92" ns0:y="353">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <jmxPort>9090</jmxPort>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Virtual Machine" minInstances="1" maxInstances="1" type="otntyIgeneral1:Ubuntu_20.04-w1" id="Ubuntu_20.04-w1_0" ns0:x="94" ns0:y="552">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <ram>32GB</ram>
+                        <storage>500GB</storage>
+                        <user/>
+                        <publicIp/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Private Cloud" minInstances="1" maxInstances="1" type="otntyIgeneral1:OpenStack_Victoria-w1" id="OpenStack_Victoria-w1_0" ns0:x="93" ns0:y="762">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <location/>
+                        <api>https://openstack.uni-stuttgart.de</api>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MOM Provider" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Simple-Queue-Service_w1" id="AWS-Simple-Queue-Service_w1_0" ns0:x="445" ns0:y="549">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <account>ustutt</account>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="PaaS Environment" minInstances="1" maxInstances="1" type="otntyIgeneral1:Elastic-Beanstalk-Worker-Environment_w1" id="Elastic-Beanstalk-Worker-Environment_w1_0" ns0:x="795" ns0:y="340">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <envType>balanced</envType>
+                        <scalingMetric/>
+                        <timespan/>
+                        <instances>1 - 16</instances>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="PaaS Provider" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Elastic-Beanstalk_w1" id="AWS-Elastic-Beanstalk_w1_0" ns0:x="798" ns0:y="545">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <account>ustutt</account>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MOM Provider" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Simple-Queue-Service_w1" id="AWS-Simple-Queue-Service_w1_1" ns0:x="1171" ns0:y="542">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <account>ustutt</account>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Webserver" minInstances="1" maxInstances="1" type="otntyIgeneral1:Tomcat_10-w1" id="Tomcat_10-w1_1" ns0:x="1527" ns0:y="333">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <jmxPort>9091</jmxPort>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Virtual Machine" minInstances="1" maxInstances="1" type="otntyIgeneral1:Ubuntu_20.04-w1" id="Ubuntu_20.04-w1_1" ns0:x="1706" ns0:y="537">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <ram>128GB</ram>
+                        <storage>10TB</storage>
+                        <user/>
+                        <publicIp/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Private Cloud" minInstances="1" maxInstances="1" type="otntyIgeneral1:OpenStack_Victoria-w1" id="OpenStack_Victoria-w1_1" ns0:x="1708" ns0:y="729">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <location/>
+                        <api>https://openstack.uni-stuttgart.de</api>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="DBMS" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-DBMS_8-w1" id="MySQL-DBMS_8-w1_0" ns0:x="1893" ns0:y="331">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <port/>
+                        <adminPort>33062</adminPort>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS_w1" id="AWS_w1_0" ns0:x="799" ns0:y="735">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <region>eu-central-1</region>
+                        <logging>false</logging>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="Java-App_11-w1_1"/>
+                <TargetElement ref="Tomcat_10-w1_1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
+                <SourceElement ref="Tomcat_10-w1_1"/>
+                <TargetElement ref="Ubuntu_20.04-w1_1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
+                <SourceElement ref="Ubuntu_20.04-w1_1"/>
+                <TargetElement ref="OpenStack_Victoria-w1_1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
+                <SourceElement ref="MySQL-DBMS_8-w1_0"/>
+                <TargetElement ref="Ubuntu_20.04-w1_1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_4">
+                <SourceElement ref="MySQL-Database_8-w1_0"/>
+                <TargetElement ref="MySQL-DBMS_8-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-SQL-Connection_w1" type="otrtyIgeneral:Secure-SQL-Connection_w1" id="con_Secure-SQL-Connection_w1_0">
+                <SourceElement ref="Java-App_11-w1_1"/>
+                <TargetElement ref="MySQL-Database_8-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1" type="otrtyIgeneral:Secure-Queue-Connection_w1" id="con_Secure-Queue-Connection_w1_0">
+                <SourceElement ref="Java-App_11-w1_1"/>
+                <TargetElement ref="SQS-Queue_w1_1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1" type="otrtyIgeneral:Secure-Queue-Connection_w1" id="con_Secure-Queue-Connection_w1_1">
+                <SourceElement ref="Java-App_11-w1_0"/>
+                <TargetElement ref="SQS-Queue_w1_1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1" type="otrtyIgeneral:Secure-Queue-Connection_w1" id="con_Secure-Queue-Connection_w1_2">
+                <SourceElement ref="Java-App_11-w1_0"/>
+                <TargetElement ref="SQS-Queue_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-Queue-Connection_w1" type="otrtyIgeneral:Secure-Queue-Connection_w1" id="con_Secure-Queue-Connection_w1_3">
+                <SourceElement ref="Angular-Web-App_w1_0"/>
+                <TargetElement ref="SQS-Queue_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_5">
+                <SourceElement ref="SQS-Queue_w1_1"/>
+                <TargetElement ref="AWS-Simple-Queue-Service_w1_1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_7">
+                <SourceElement ref="Java-App_11-w1_0"/>
+                <TargetElement ref="Elastic-Beanstalk-Worker-Environment_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_8">
+                <SourceElement ref="Elastic-Beanstalk-Worker-Environment_w1_0"/>
+                <TargetElement ref="AWS-Elastic-Beanstalk_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_10">
+                <SourceElement ref="SQS-Queue_w1_0"/>
+                <TargetElement ref="AWS-Simple-Queue-Service_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_12">
+                <SourceElement ref="Angular-Web-App_w1_0"/>
+                <TargetElement ref="Tomcat_10-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_13">
+                <SourceElement ref="Tomcat_10-w1_0"/>
+                <TargetElement ref="Ubuntu_20.04-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_14">
+                <SourceElement ref="Ubuntu_20.04-w1_0"/>
+                <TargetElement ref="OpenStack_Victoria-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_6">
+                <SourceElement ref="AWS-Simple-Queue-Service_w1_1"/>
+                <TargetElement ref="AWS_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_9">
+                <SourceElement ref="AWS-Elastic-Beanstalk_w1_0"/>
+                <TargetElement ref="AWS_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_11">
+                <SourceElement ref="AWS-Simple-Queue-Service_w1_0"/>
+                <TargetElement ref="AWS_w1_0"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>

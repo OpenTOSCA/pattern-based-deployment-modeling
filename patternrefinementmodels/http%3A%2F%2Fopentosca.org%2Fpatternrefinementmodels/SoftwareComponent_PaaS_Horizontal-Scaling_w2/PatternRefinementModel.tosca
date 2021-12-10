@@ -58,7 +58,7 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Elastic-Beanstalk-Webserver-Environment_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Elastic-Beanstalk-Webserver-Environment_w1-wip1" id="rs_Elastic-Beanstalk-Webserver-Environment_w1-wip1_0" winery:x="794" winery:y="315">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Elastic-Beanstalk-Webserver-Environment_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Elastic-Beanstalk-Webserver-Environment_w1" id="rs_Elastic-Beanstalk-Webserver-Environment_w1_0" winery:x="794" winery:y="315">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <envType>balanced</envType>
@@ -72,7 +72,7 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Elastic-Beanstalk_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Elastic-Beanstalk_w1-wip1" id="rs_AWS-Elastic-Beanstalk_w1-wip1_0" winery:x="795" winery:y="612">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Elastic-Beanstalk_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Elastic-Beanstalk_w1" id="rs_AWS-Elastic-Beanstalk_w1_0" winery:x="795" winery:y="612">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <account/>
@@ -93,19 +93,19 @@
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
                 <SourceElement ref="rs_SoftwareComponent_0"/>
-                <TargetElement ref="rs_Elastic-Beanstalk-Webserver-Environment_w1-wip1_0"/>
+                <TargetElement ref="rs_Elastic-Beanstalk-Webserver-Environment_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_2">
-                <SourceElement ref="rs_Elastic-Beanstalk-Webserver-Environment_w1-wip1_0"/>
-                <TargetElement ref="rs_AWS-Elastic-Beanstalk_w1-wip1_0"/>
+                <SourceElement ref="rs_Elastic-Beanstalk-Webserver-Environment_w1_0"/>
+                <TargetElement ref="rs_AWS-Elastic-Beanstalk_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
-                <SourceElement ref="rs_AWS-Elastic-Beanstalk_w1-wip1_0"/>
+                <SourceElement ref="rs_AWS-Elastic-Beanstalk_w1_0"/>
                 <TargetElement ref="rs_Public-Cloud_w1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings>
-            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Elastic-Beanstalk_w1-wip1_0" id="propMap0"/>
+            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Elastic-Beanstalk_w1_0" id="propMap0"/>
             <AttributeMapping type="selective" detectorProperty="location" refinementProperty="location" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_Public-Cloud_w1_0" id="propMap1"/>
         </AttributeMappings>
         <StayMappings>
@@ -114,7 +114,7 @@
         <DeploymentArtifactMappings/>
         <PermutationOptions/>
         <BehaviorPatternMappings>
-            <BehaviorPatternMapping behaviorPattern="horizontalScaling" detectorNode="d_SoftwareComponent_0" refinementNode="rs_Elastic-Beanstalk-Webserver-Environment_w1-wip1_0" id="behaviorPatternMap0">
+            <BehaviorPatternMapping behaviorPattern="horizontalScaling" detectorNode="d_SoftwareComponent_0" refinementNode="rs_Elastic-Beanstalk-Webserver-Environment_w1_0" id="behaviorPatternMap0">
                 <Property key="envType" value="balanced"/>
             </BehaviorPatternMapping>
         </BehaviorPatternMappings>

@@ -47,10 +47,10 @@
         </Detector>
         <RelationMappings>
             <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="outgoing" detectorNode="d_SoftwareComponent_0" refinementNode="rs_SoftwareComponent_0" id="relMap0"/>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="relMap1"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1_0" id="relMap1"/>
         </RelationMappings>
         <PermutationMappings>
-            <PermutationMapping detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="permutationMap0"/>
+            <PermutationMapping detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1_0" id="permutationMap0"/>
         </PermutationMappings>
         <RefinementStructure>
             <NodeTemplate xmlns:ntyIgeneral="http://docs.oasis-open.org/tosca/ToscaNormativeTypes/nodetypes" name="SoftwareComponent" minInstances="1" maxInstances="1" type="ntyIgeneral:SoftwareComponent" id="rs_SoftwareComponent_0" winery:x="839" winery:y="158">
@@ -58,14 +58,14 @@
                     <Properties xmlns="http://www.example.org" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"/>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Elastic-Beanstalk_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Elastic-Beanstalk_w1-wip1" id="rs_AWS-Elastic-Beanstalk_w1-wip1_0" winery:x="868" winery:y="502">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Elastic-Beanstalk_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Elastic-Beanstalk_w1" id="rs_AWS-Elastic-Beanstalk_w1_0" winery:x="868" winery:y="502">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <account/>
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS_w1-wip1" id="rs_AWS_w1-wip1_0" winery:x="910" winery:y="723">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS_w1" id="rs_AWS_w1_0" winery:x="910" winery:y="723">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <region/>
@@ -73,7 +73,7 @@
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Elastic-Beanstalk-Worker-Environment_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Elastic-Beanstalk-Worker-Environment_w1-wip1" id="rs_Elastic-Beanstalk-Worker-Environment_w1-wip1_0" winery:x="817" winery:y="330">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Elastic-Beanstalk-Worker-Environment_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Elastic-Beanstalk-Worker-Environment_w1" id="rs_Elastic-Beanstalk-Worker-Environment_w1_0" winery:x="817" winery:y="330">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <envType>balanced</envType>
@@ -85,20 +85,20 @@
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
                 <SourceElement ref="rs_SoftwareComponent_0"/>
-                <TargetElement ref="rs_Elastic-Beanstalk-Worker-Environment_w1-wip1_0"/>
+                <TargetElement ref="rs_Elastic-Beanstalk-Worker-Environment_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
-                <SourceElement ref="rs_AWS-Elastic-Beanstalk_w1-wip1_0"/>
-                <TargetElement ref="rs_AWS_w1-wip1_0"/>
+                <SourceElement ref="rs_AWS-Elastic-Beanstalk_w1_0"/>
+                <TargetElement ref="rs_AWS_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_2">
-                <SourceElement ref="rs_Elastic-Beanstalk-Worker-Environment_w1-wip1_0"/>
-                <TargetElement ref="rs_AWS-Elastic-Beanstalk_w1-wip1_0"/>
+                <SourceElement ref="rs_Elastic-Beanstalk-Worker-Environment_w1_0"/>
+                <TargetElement ref="rs_AWS-Elastic-Beanstalk_w1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings>
-            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Elastic-Beanstalk_w1-wip1_0" id="propMap0"/>
-            <AttributeMapping type="selective" detectorProperty="location" refinementProperty="region" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="propMap1"/>
+            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Elastic-Beanstalk_w1_0" id="propMap0"/>
+            <AttributeMapping type="selective" detectorProperty="location" refinementProperty="region" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1_0" id="propMap1"/>
         </AttributeMappings>
         <StayMappings>
             <StayMapping detectorNode="d_SoftwareComponent_0" refinementNode="rs_SoftwareComponent_0" id="stayMap0"/>
@@ -106,7 +106,7 @@
         <DeploymentArtifactMappings/>
         <PermutationOptions/>
         <BehaviorPatternMappings>
-            <BehaviorPatternMapping behaviorPattern="unpredictableWorkload" detectorNode="d_SoftwareComponent_0" refinementNode="rs_Elastic-Beanstalk-Worker-Environment_w1-wip1_0" id="behaviorPatternMap0">
+            <BehaviorPatternMapping behaviorPattern="unpredictableWorkload" detectorNode="d_SoftwareComponent_0" refinementNode="rs_Elastic-Beanstalk-Worker-Environment_w1_0" id="behaviorPatternMap0">
                 <Property key="envType" value="balanced"/>
             </BehaviorPatternMapping>
         </BehaviorPatternMappings>

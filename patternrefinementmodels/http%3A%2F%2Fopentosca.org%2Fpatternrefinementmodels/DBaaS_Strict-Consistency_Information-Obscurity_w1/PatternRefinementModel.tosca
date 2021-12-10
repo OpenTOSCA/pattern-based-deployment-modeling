@@ -34,14 +34,14 @@
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="relMap1"/>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_MySQL-Database_8-w1-wip1_0" id="relMap2"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1_0" id="relMap1"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_MySQL-Database_8-w1_0" id="relMap2"/>
         </RelationMappings>
         <PermutationMappings>
-            <PermutationMapping detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="permutationMap0"/>
+            <PermutationMapping detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1_0" id="permutationMap0"/>
         </PermutationMappings>
         <RefinementStructure>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MySQL-DBMS" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-DBMS_8-w1-wip1" id="rs_MySQL-DBMS_8-w1-wip1_0" ns0:x="815" ns0:y="465">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MySQL-DBMS" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-DBMS_8-w1" id="rs_MySQL-DBMS_8-w1_0" ns0:x="815" ns0:y="465">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <port/>
@@ -49,14 +49,14 @@
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MySQL-Database" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-Database_8-w1-wip1" id="rs_MySQL-Database_8-w1-wip1_0" ns0:x="823" ns0:y="215">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="MySQL-Database" minInstances="1" maxInstances="1" type="otntyIgeneral1:MySQL-Database_8-w1" id="rs_MySQL-Database_8-w1_0" ns0:x="823" ns0:y="215">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <dbName/>
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Relational-Database-Service_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Relational-Database-Service_w1-wip1" id="rs_AWS-Relational-Database-Service_w1-wip1_0" ns0:x="809" ns0:y="647">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Relational-Database-Service_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Relational-Database-Service_w1" id="rs_AWS-Relational-Database-Service_w1_0" ns0:x="809" ns0:y="647">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <account/>
@@ -65,7 +65,7 @@
                     </Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS_w1-wip1" id="rs_AWS_w1-wip1_0" ns0:x="815" ns0:y="872">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS_w1" id="rs_AWS_w1_0" ns0:x="815" ns0:y="872">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <region/>
@@ -74,30 +74,30 @@
                 </Properties>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
-                <SourceElement ref="rs_MySQL-Database_8-w1-wip1_0"/>
-                <TargetElement ref="rs_MySQL-DBMS_8-w1-wip1_0"/>
+                <SourceElement ref="rs_MySQL-Database_8-w1_0"/>
+                <TargetElement ref="rs_MySQL-DBMS_8-w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
-                <SourceElement ref="rs_MySQL-DBMS_8-w1-wip1_0"/>
-                <TargetElement ref="rs_AWS-Relational-Database-Service_w1-wip1_0"/>
+                <SourceElement ref="rs_MySQL-DBMS_8-w1_0"/>
+                <TargetElement ref="rs_AWS-Relational-Database-Service_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_2">
-                <SourceElement ref="rs_AWS-Relational-Database-Service_w1-wip1_0"/>
-                <TargetElement ref="rs_AWS_w1-wip1_0"/>
+                <SourceElement ref="rs_AWS-Relational-Database-Service_w1_0"/>
+                <TargetElement ref="rs_AWS_w1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings>
-            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Relational-Database-Service_w1-wip1_0" id="propMap0"/>
-            <AttributeMapping type="selective" detectorProperty="location" refinementProperty="region" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1-wip1_0" id="propMap1"/>
+            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Relational-Database-Service_w1_0" id="propMap0"/>
+            <AttributeMapping type="selective" detectorProperty="location" refinementProperty="region" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS_w1_0" id="propMap1"/>
         </AttributeMappings>
         <StayMappings/>
         <DeploymentArtifactMappings/>
         <PermutationOptions/>
         <BehaviorPatternMappings>
-            <BehaviorPatternMapping behaviorPattern="strictConsistency" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_AWS-Relational-Database-Service_w1-wip1_0" id="behaviorPatternMap0">
+            <BehaviorPatternMapping behaviorPattern="strictConsistency" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_AWS-Relational-Database-Service_w1_0" id="behaviorPatternMap0">
                 <Property key="azDeployment" value="yes"/>
             </BehaviorPatternMapping>
-            <BehaviorPatternMapping behaviorPattern="informationObscurity" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_AWS-Relational-Database-Service_w1-wip1_0" id="behaviorPatternMap1">
+            <BehaviorPatternMapping behaviorPattern="informationObscurity" detectorNode="d_Relational-Database_w1_0" refinementNode="rs_AWS-Relational-Database-Service_w1_0" id="behaviorPatternMap1">
                 <Property key="encryption" value="yes"/>
             </BehaviorPatternMapping>
         </BehaviorPatternMappings>

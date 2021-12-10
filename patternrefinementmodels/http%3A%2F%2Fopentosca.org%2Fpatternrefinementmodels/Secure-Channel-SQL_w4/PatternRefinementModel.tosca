@@ -22,7 +22,7 @@
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="SQL-Connection_w1-wip1" type="otrtyIgeneral:SQL-Connection_w1-wip1" id="d_con_SQL-Connection_w1-wip1_0">
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="SQL-Connection_w1" type="otrtyIgeneral:SQL-Connection_w1" id="d_con_SQL-Connection_w1_0">
                 <SourceElement ref="d_SoftwareComponent_0"/>
                 <TargetElement ref="d_Relational-Database_w1_0"/>
                 <Policies>
@@ -54,7 +54,7 @@
                 </Policies>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-SQL-Connection_w1-wip1" type="otrtyIgeneral:Secure-SQL-Connection_w1-wip1" id="rs_con_Secure-SQL-Connection_w1-wip1_1">
+            <RelationshipTemplate xmlns:otrtyIgeneral="http://opentosca.org/relationshiptypes" name="Secure-SQL-Connection_w1" type="otrtyIgeneral:Secure-SQL-Connection_w1" id="rs_con_Secure-SQL-Connection_w1_1">
                 <SourceElement ref="rs_SoftwareComponent_0"/>
                 <TargetElement ref="rs_Relational-Database_w1_0"/>
             </RelationshipTemplate>

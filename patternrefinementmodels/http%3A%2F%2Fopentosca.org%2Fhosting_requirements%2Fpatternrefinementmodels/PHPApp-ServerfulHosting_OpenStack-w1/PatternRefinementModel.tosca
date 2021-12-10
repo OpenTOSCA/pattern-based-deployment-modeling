@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/hosting_requirements/patternrefinementmodels" id="otIhostingRequirements-PHPApp-ServerfulHosting_OpenStack-w1">
+    <PatternRefinementModel isPdrm="no" name="PHPApp-ServerfulHosting_OpenStack-w1" targetNamespace="http://opentosca.org/hosting_requirements/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="PHP-Applicaiton_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:PHP-Applicaiton_w1" id="d_PHP-Applicaiton_w1_0" winery:x="375" winery:y="186">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <context_root/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Serverful-Hosting_w1" minInstances="1" maxInstances="1" type="otntyIpatterns:Serverful-Hosting_w1" id="d_Serverful-Hosting_w1_0" winery:x="431" winery:y="424">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0">
+                <SourceElement ref="d_PHP-Applicaiton_w1_0"/>
+                <TargetElement ref="d_Serverful-Hosting_w1_0"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Serverful-Hosting_w1_0" refinementNode="rs_Ubuntu_20.04-w1_0" id="relMap0"/>
+        </RelationMappings>
+        <PermutationMappings/>
+        <RefinementStructure>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="otntyIgeneral1:Ubuntu_20.04-w1" id="rs_Ubuntu_20.04-w1_0" winery:x="397" winery:y="549">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <ram/>
+                        <storage/>
+                        <user/>
+                        <publicIp/>
+                    </properties>
+                </Properties>
+                <Capabilities/>
+                <Policies/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="otntyIgeneral1:OpenStack_Victoria-w1" id="rs_OpenStack_Victoria-w1_0" winery:x="402" winery:y="691">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <location/>
+                        <api/>
+                    </properties>
+                </Properties>
+                <Capabilities/>
+                <Policies/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Apache" minInstances="1" maxInstances="1" type="otntyIgeneral1:Apache_2.4-w1" id="rs_Apache_2.4-w1_0" winery:x="398" winery:y="391">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Apache-PHP-Module" minInstances="1" maxInstances="1" type="otntyIgeneral1:Apache-PHP-Module_7-w1" id="rs_Apache-PHP-Module_7-w1_0" winery:x="714" winery:y="450">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="PHP-Applicaiton_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:PHP-Applicaiton_w1" id="rs_PHP-Applicaiton_w1_0" winery:x="399" winery:y="240">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <context_root/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
+                <SourceElement ref="rs_Ubuntu_20.04-w1_0"/>
+                <TargetElement ref="rs_OpenStack_Victoria-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <SourceElement ref="rs_Apache_2.4-w1_0"/>
+                <TargetElement ref="rs_Ubuntu_20.04-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="DependsOn" type="ToscaBaseTypes:DependsOn" id="rs_con_DependsOn_0">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <SourceElement ref="rs_Apache_2.4-w1_0"/>
+                <TargetElement ref="rs_Apache-PHP-Module_7-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_2">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <SourceElement ref="rs_Apache-PHP-Module_7-w1_0"/>
+                <TargetElement ref="rs_Ubuntu_20.04-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_3">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <SourceElement ref="rs_PHP-Applicaiton_w1_0"/>
+                <TargetElement ref="rs_Apache_2.4-w1_0"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <AttributeMappings/>
+        <StayMappings>
+            <StayMapping detectorNode="d_PHP-Applicaiton_w1_0" refinementNode="rs_PHP-Applicaiton_w1_0" id="stayMap0"/>
+        </StayMappings>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings/>
+    </PatternRefinementModel>
+</Definitions>

@@ -60,7 +60,7 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Lambda-Function_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Lambda-Function_w1-wip1" id="rs_Lambda-Function_w1-wip1_0" winery:x="738" winery:y="330">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Lambda-Function_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Lambda-Function_w1" id="rs_Lambda-Function_w1_0" winery:x="738" winery:y="330">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <codeSigning/>
@@ -73,7 +73,7 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Lambda_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Lambda_w1-wip1" id="rs_AWS-Lambda_w1-wip1_0" winery:x="749" winery:y="629">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Lambda_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Lambda_w1" id="rs_AWS-Lambda_w1_0" winery:x="749" winery:y="629">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <account/>
@@ -94,19 +94,19 @@
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
                 <SourceElement ref="rs_SoftwareComponent_0"/>
-                <TargetElement ref="rs_Lambda-Function_w1-wip1_0"/>
+                <TargetElement ref="rs_Lambda-Function_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
-                <SourceElement ref="rs_Lambda-Function_w1-wip1_0"/>
-                <TargetElement ref="rs_AWS-Lambda_w1-wip1_0"/>
+                <SourceElement ref="rs_Lambda-Function_w1_0"/>
+                <TargetElement ref="rs_AWS-Lambda_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_2">
-                <SourceElement ref="rs_AWS-Lambda_w1-wip1_0"/>
+                <SourceElement ref="rs_AWS-Lambda_w1_0"/>
                 <TargetElement ref="rs_Public-Cloud_w1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings>
-            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Lambda_w1-wip1_0" id="propMap0"/>
+            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Lambda_w1_0" id="propMap0"/>
             <AttributeMapping type="selective" detectorProperty="location" refinementProperty="location" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_Public-Cloud_w1_0" id="propMap1"/>
         </AttributeMappings>
         <StayMappings>
@@ -115,7 +115,7 @@
         <DeploymentArtifactMappings/>
         <PermutationOptions/>
         <BehaviorPatternMappings>
-            <BehaviorPatternMapping behaviorPattern="eventDrivenConsumer" detectorNode="d_SoftwareComponent_0" refinementNode="rs_Lambda-Function_w1-wip1_0" id="behaviorPatternMap0">
+            <BehaviorPatternMapping behaviorPattern="eventDrivenConsumer" detectorNode="d_SoftwareComponent_0" refinementNode="rs_Lambda-Function_w1_0" id="behaviorPatternMap0">
                 <Property key="trigger" value="onSQSmessage"/>
             </BehaviorPatternMapping>
         </BehaviorPatternMappings>
