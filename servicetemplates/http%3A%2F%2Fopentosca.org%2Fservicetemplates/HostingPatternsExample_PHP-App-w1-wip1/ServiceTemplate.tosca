@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/servicetemplates" id="otsteIgeneral-HostingPatternsExample_PHP-App-w1-wip1">
+    <ServiceTemplate name="HostingPatternsExample_PHP-App-w1-wip1" targetNamespace="http://opentosca.org/servicetemplates" id="HostingPatternsExample_PHP-App-w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Customizable-Deployment-Stack_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Customizable-Deployment-Stack_w1-wip1" id="Customizable-Deployment-Stack_w1-wip1_0" winery:x="449" winery:y="396"/>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="PHP-Applicaiton_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:PHP-Applicaiton_w1-wip1" id="PHP-Applicaiton_w1-wip1_0" winery:x="387" winery:y="161">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <context_root/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="PHP-Applicaiton_w1-wip1_0"/>
+                <TargetElement ref="Customizable-Deployment-Stack_w1-wip1_0"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>

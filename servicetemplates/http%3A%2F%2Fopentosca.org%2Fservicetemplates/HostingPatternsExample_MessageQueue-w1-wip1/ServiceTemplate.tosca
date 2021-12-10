@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/servicetemplates" id="otsteIgeneral-HostingPatternsExample_MessageQueue-w1-wip1">
+    <ServiceTemplate name="HostingPatternsExample_MessageQueue-w1-wip1" targetNamespace="http://opentosca.org/servicetemplates" id="HostingPatternsExample_MessageQueue-w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIpatterns="http://opentosca.org/nodetypes/patterns" name="Fixed-Deployment-Stack_w1-wip1" minInstances="1" maxInstances="1" type="otntyIpatterns:Fixed-Deployment-Stack_w1-wip1" id="Fixed-Deployment-Stack_w1-wip1_0" winery:x="676" winery:y="455"/>
+            <NodeTemplate xmlns:otntyIabstract="http://opentosca.org/nodetypes/abstract" name="Queue_w1-wip1" minInstances="1" maxInstances="1" type="otntyIabstract:Queue_w1-wip1" id="Queue_w1-wip1_0" winery:x="602" winery:y="227">
+                <Policies>
+                    <Policy xmlns:otptyIpatterns="http://opentosca.org/policytypes/patterns" name="scaling" policyType="otptyIpatterns:Consumer-managed-Scaling-Configuration_w1-wip1"/>
+                </Policies>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="Queue_w1-wip1_0"/>
+                <TargetElement ref="Fixed-Deployment-Stack_w1-wip1_0"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
