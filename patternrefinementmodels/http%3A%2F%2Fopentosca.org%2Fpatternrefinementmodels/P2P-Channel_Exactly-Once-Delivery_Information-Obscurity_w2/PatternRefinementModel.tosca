@@ -41,16 +41,16 @@
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1-wip1_0" id="relMap1"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="ingoing" detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1_0" id="relMap1"/>
             <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_Public-Cloud_w1_0" id="relMap2"/>
         </RelationMappings>
         <PermutationMappings>
-            <PermutationMapping detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1-wip1_0" id="permutationMap0"/>
-            <PermutationMapping detectorNode="d_Message-oriented-Middleware_w1_0" refinementNode="rs_AWS-Simple-Queue-Service_w1-wip1_0" id="permutationMap1"/>
+            <PermutationMapping detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1_0" id="permutationMap0"/>
+            <PermutationMapping detectorNode="d_Message-oriented-Middleware_w1_0" refinementNode="rs_AWS-Simple-Queue-Service_w1_0" id="permutationMap1"/>
             <PermutationMapping detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_Public-Cloud_w1_0" id="permutationMap2"/>
         </PermutationMappings>
         <RefinementStructure>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="SQS-Queue_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:SQS-Queue_w1-wip1" id="rs_SQS-Queue_w1-wip1_0" ns0:x="878" ns0:y="92">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="SQS-Queue_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:SQS-Queue_w1" id="rs_SQS-Queue_w1_0" ns0:x="878" ns0:y="92">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <type>FIFO</type>
@@ -63,7 +63,7 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Simple-Queue-Service_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Simple-Queue-Service_w1-wip1" id="rs_AWS-Simple-Queue-Service_w1-wip1_0" ns0:x="884" ns0:y="305">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="AWS-Simple-Queue-Service_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:AWS-Simple-Queue-Service_w1" id="rs_AWS-Simple-Queue-Service_w1_0" ns0:x="884" ns0:y="305">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <account/>
@@ -83,26 +83,26 @@
                 </Properties>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
-                <SourceElement ref="rs_SQS-Queue_w1-wip1_0"/>
-                <TargetElement ref="rs_AWS-Simple-Queue-Service_w1-wip1_0"/>
+                <SourceElement ref="rs_SQS-Queue_w1_0"/>
+                <TargetElement ref="rs_AWS-Simple-Queue-Service_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
-                <SourceElement ref="rs_AWS-Simple-Queue-Service_w1-wip1_0"/>
+                <SourceElement ref="rs_AWS-Simple-Queue-Service_w1_0"/>
                 <TargetElement ref="rs_Public-Cloud_w1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings>
-            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Simple-Queue-Service_w1-wip1_0" id="propMap0"/>
+            <AttributeMapping type="selective" detectorProperty="account" refinementProperty="account" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_AWS-Simple-Queue-Service_w1_0" id="propMap0"/>
             <AttributeMapping type="selective" detectorProperty="location" refinementProperty="location" detectorNode="d_Public-Cloud_w1_0" refinementNode="rs_Public-Cloud_w1_0" id="propMap1"/>
         </AttributeMappings>
         <StayMappings/>
         <DeploymentArtifactMappings/>
         <PermutationOptions/>
         <BehaviorPatternMappings>
-            <BehaviorPatternMapping behaviorPattern="exactlyOnceDelivery" detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1-wip1_0" id="BehaviorPatternMapping_0">
+            <BehaviorPatternMapping behaviorPattern="exactlyOnceDelivery" detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1_0" id="BehaviorPatternMapping_0">
                 <Property key="type" value="FIFO"/>
             </BehaviorPatternMapping>
-            <BehaviorPatternMapping behaviorPattern="informationObscurity" detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1-wip1_0" id="BehaviorPatternMapping_1">
+            <BehaviorPatternMapping behaviorPattern="informationObscurity" detectorNode="d_Point-to-Point-Channel_w1_0" refinementNode="rs_SQS-Queue_w1_0" id="BehaviorPatternMapping_1">
                 <Property key="serverSideEncryption" value="yes"/>
             </BehaviorPatternMapping>
         </BehaviorPatternMappings>

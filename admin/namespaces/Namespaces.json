@@ -44,6 +44,24 @@
     "secureCollection" : false,
     "generatedNamespace" : false
   },
+  "http://opentosca.org/management_requirements/patternrefinementmodels" : {
+    "namespace" : "http://opentosca.org/management_requirements/patternrefinementmodels",
+    "prefix" : "otImanagementRequirements",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  },
+  "http://opentosca.org/hosting_requirements/patternrefinementmodels" : {
+    "namespace" : "http://opentosca.org/hosting_requirements/patternrefinementmodels",
+    "prefix" : "otIhostingRequirements",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  },
   "http://opentosca.org/relationshiptypes" : {
     "namespace" : "http://opentosca.org/relationshiptypes",
     "prefix" : "otrtyIgeneral",

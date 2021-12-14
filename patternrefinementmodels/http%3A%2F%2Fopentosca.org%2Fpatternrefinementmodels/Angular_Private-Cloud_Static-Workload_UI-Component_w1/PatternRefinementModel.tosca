@@ -2,7 +2,7 @@
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-Angular_Private-Cloud_Static-Workload_UI-Component_w1">
     <PatternRefinementModel isPdrm="yes" name="Angular_Private-Cloud_Static-Workload_UI-Component_w1" targetNamespace="http://opentosca.org/patternrefinementmodels">
         <Detector>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Angular-Web-App_w1-wip2" minInstances="1" maxInstances="1" type="otntyIgeneral1:Angular-Web-App_w1-wip2" id="d_Angular-Web-App_w1-wip2_0" ns0:x="812" ns0:y="198">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Angular-Web-App_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Angular-Web-App_w1" id="d_Angular-Web-App_w1_0" ns0:x="812" ns0:y="198">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <context/>
@@ -36,7 +36,7 @@
                 <DeploymentArtifacts/>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0">
-                <SourceElement ref="d_Angular-Web-App_w1-wip2_0"/>
+                <SourceElement ref="d_Angular-Web-App_w1_0"/>
                 <TargetElement ref="d_Execution-Environment_w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_1">
@@ -45,11 +45,11 @@
             </RelationshipTemplate>
         </Detector>
         <RelationMappings>
-            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="outgoing" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Angular-Web-App_w1-wip2_0" id="relMap0"/>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:ConnectsTo" direction="outgoing" detectorNode="d_Angular-Web-App_w1_0" refinementNode="rs_Angular-Web-App_w1_0" id="relMap0"/>
         </RelationMappings>
         <PermutationMappings/>
         <RefinementStructure>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Angular-Web-App_w1-wip2" minInstances="1" maxInstances="1" type="otntyIgeneral1:Angular-Web-App_w1-wip2" id="rs_Angular-Web-App_w1-wip2_0" ns0:x="682" ns0:y="183">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Angular-Web-App_w1" minInstances="1" maxInstances="1" type="otntyIgeneral1:Angular-Web-App_w1" id="rs_Angular-Web-App_w1_0" ns0:x="682" ns0:y="183">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <context/>
@@ -57,14 +57,14 @@
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Tomcat" minInstances="1" maxInstances="1" type="otntyIgeneral1:Tomcat_10-w1-wip1" id="rs_Tomcat_10-w1-wip1_0" ns0:x="681" ns0:y="376">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Tomcat" minInstances="1" maxInstances="1" type="otntyIgeneral1:Tomcat_10-w1" id="rs_Tomcat_10-w1_0" ns0:x="681" ns0:y="376">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <jmxPort/>
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="otntyIgeneral1:Ubuntu_20.04-w1-wip1" id="rs_Ubuntu_20.04-w1-wip1_0" ns0:x="702" ns0:y="510">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="otntyIgeneral1:Ubuntu_20.04-w1" id="rs_Ubuntu_20.04-w1_0" ns0:x="702" ns0:y="510">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <ram>32GB</ram>
@@ -74,7 +74,7 @@
                     </Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="otntyIgeneral1:OpenStack_Victoria-w1-wip1" id="rs_OpenStack_Victoria-w1-wip1_0" ns0:x="675" ns0:y="853">
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="otntyIgeneral1:OpenStack_Victoria-w1" id="rs_OpenStack_Victoria-w1_0" ns0:x="675" ns0:y="853">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <location/>
@@ -83,34 +83,34 @@
                 </Properties>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
-                <SourceElement ref="rs_Angular-Web-App_w1-wip2_0"/>
-                <TargetElement ref="rs_Tomcat_10-w1-wip1_0"/>
+                <SourceElement ref="rs_Angular-Web-App_w1_0"/>
+                <TargetElement ref="rs_Tomcat_10-w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_1">
-                <SourceElement ref="rs_Tomcat_10-w1-wip1_0"/>
-                <TargetElement ref="rs_Ubuntu_20.04-w1-wip1_0"/>
+                <SourceElement ref="rs_Tomcat_10-w1_0"/>
+                <TargetElement ref="rs_Ubuntu_20.04-w1_0"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"  name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_2">
-                <SourceElement ref="rs_Ubuntu_20.04-w1-wip1_0"/>
-                <TargetElement ref="rs_OpenStack_Victoria-w1-wip1_0"/>
+                <SourceElement ref="rs_Ubuntu_20.04-w1_0"/>
+                <TargetElement ref="rs_OpenStack_Victoria-w1_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
         <AttributeMappings/>
         <StayMappings>
-            <StayMapping detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Angular-Web-App_w1-wip2_0" id="stayMap0"/>
+            <StayMapping detectorNode="d_Angular-Web-App_w1_0" refinementNode="rs_Angular-Web-App_w1_0" id="stayMap0"/>
         </StayMappings>
         <DeploymentArtifactMappings/>
         <PermutationOptions/>
         <BehaviorPatternMappings>
-            <BehaviorPatternMapping behaviorPattern="staticWorkload" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Ubuntu_20.04-w1-wip1_0" id="behaviorPatternMap0">
+            <BehaviorPatternMapping behaviorPattern="staticWorkload" detectorNode="d_Angular-Web-App_w1_0" refinementNode="rs_Ubuntu_20.04-w1_0" id="behaviorPatternMap0">
                 <Property key="ram" value="32GB"/>
             </BehaviorPatternMapping>
-            <BehaviorPatternMapping behaviorPattern="staticWorkload" detectorNode="d_Angular-Web-App_w1-wip2_0" refinementNode="rs_Ubuntu_20.04-w1-wip1_0" id="behaviorPatternMap1">
+            <BehaviorPatternMapping behaviorPattern="staticWorkload" detectorNode="d_Angular-Web-App_w1_0" refinementNode="rs_Ubuntu_20.04-w1_0" id="behaviorPatternMap1">
                 <Property key="storage" value="500GB"/>
             </BehaviorPatternMapping>
         </BehaviorPatternMappings>
         <PermutationMappings>
-            <PermutationMapping detectorNode="d_Private-Cloud_w1_0" refinementNode="rs_OpenStack_Victoria-w1-wip1_0" id="permutationMap0"/>
+            <PermutationMapping detectorNode="d_Private-Cloud_w1_0" refinementNode="rs_OpenStack_Victoria-w1_0" id="permutationMap0"/>
         </PermutationMappings>
     </PatternRefinementModel>
 </Definitions>
